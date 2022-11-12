@@ -15,7 +15,7 @@ export default {
   methods: {},
 };
 </script>
-<style>
+<style scoped>
 figure {
   display: block;
   margin-block-start: 0;

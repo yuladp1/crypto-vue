@@ -7,7 +7,17 @@
       <figure>
         <img src="../assets/blueCircle.svg" alt="" />
       </figure>
-      <div class="continue-transfer"></div>
+      <div class="continue-transfer">
+        <div class="wrapper-buttons">
+          <button class="send">Send</button>
+          <button class="recieve">Recieve</button>
+        </div>
+        <div class="wrapper-amount-change">
+          <p class="amount">$350.00</p>
+          <p class="exchange-rate">0 BTC ≈ $0.00</p>
+          <img src="../assets/icon.svg" alt="" class="change-currency" />
+        </div>
+      </div>
       <img src="../assets/blue_arrow.svg" alt="" class="blue-arrow" />
       <img src="../assets/bluecoin.svg" alt="" class="blue-coin" />
     </div>
@@ -87,5 +97,62 @@ img {
   position: absolute;
   top: 27px;
   z-index: 2;
+}
+.wrapper-buttons,
+.wrapper-amount-change {
+  display: flex;
+  justify-items: center;
+  width: 140px;
+  margin: auto;
+  position: relative;
+}
+.wrapper-amount-change {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.send,
+.recieve {
+  font-size: 12px;
+  font-weight: 400;
+  padding: 7px;
+  color: black;
+  background-color: #ffffff;
+  border-radius: 6.2px;
+  border: 1px solid white;
+  width: 65px;
+}
+.send:hover,
+.recieve:hover {
+  color: white;
+  background-color: black;
+  border-radius: 6.2px;
+  border: 1px solid black;
+}
+.recieve {
+  margin-left: 10px;
+}
+.change-currency {
+  width: 13.5px;
+  height: 10px;
+  padding: 10px 10px;
+  border: 1px soid #cfdbd5;
+  border-radius: 4.68px;
+  position: absolute;
+  top: 40px;
+  right: 16px;
+}
+.amount {
+  font-size: 33px;
+  font-weight: 800;
+  line-height: 40px;
+  margin: 27px 0 0 0;
+}
+.exchange-rate {
+  margin-block-start: 0;
+  font-size: 8.2px;
+  font-weight: 400;
+  line-height: 12.28px;
+  color: #5d5d5b;
 }
 </style>
