@@ -16,11 +16,30 @@
           <p class="amount">$350.00</p>
           <p class="exchange-rate">0 BTC ≈ $0.00</p>
           <button class="change-currency" />
+          <form>
+            <div class="wrapper-label-input">
+              <label>Pay with</label>
+              <select>
+                <option>Bitcoin</option>
+                <option>Currency2</option>
+                <option>Currency3</option>
+              </select>
+            </div>
+            <div class="wrapper-label-input">
+              <label>Send to</label>
+              <input type="text" />
+            </div>
+            <div class="wrapper-label-input">
+              <label>Note</label>
+              <input type="text" />
+            </div>
+          </form>
         </div>
       </div>
       <img src="../assets/blue_arrow.svg" alt="" class="blue-arrow" />
       <img src="../assets/bluecoin.svg" alt="" class="blue-coin" />
     </div>
+    <div class="empty-block"></div>
   </section>
 </template>
 
@@ -159,5 +178,42 @@ img {
   font-weight: 400;
   line-height: 12.28px;
   color: #5d5d5b;
+}
+.empty-block {
+  width: 100%;
+  height: 100px;
+  background-color: #f5f9fe;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f9fe;
+  margin: 0 16px;
+  width: auto;
+}
+label {
+  width: 70px;
+  font-size: 9.31px;
+  font-weight: 500;
+  line-height: 14px;
+  color: #5d5d5b;
+}
+
+input,
+select {
+  width: 140px;
+  height: 43px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 16.22px;
+  background-color: #f5f9fe;
+  border: none;
+}
+.wrapper-label-input {
+  display: flex;
+  height: 48px;
+  align-items: center;
+  margin: 0 18px 0 16px;
+  border-bottom: 2px solid rgba(207, 219, 213, 0.6);
 }
 </style>

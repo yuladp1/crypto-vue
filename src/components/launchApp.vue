@@ -59,6 +59,7 @@ button {
   width: 20px;
   height: 20px;
   margin-right: 5px;
+  margin-inline-start: 0px;
 }
 .working-smart {
   font-size: 14px;
