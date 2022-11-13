@@ -15,7 +15,7 @@
         <div class="wrapper-amount-change">
           <p class="amount">$350.00</p>
           <p class="exchange-rate">0 BTC ≈ $0.00</p>
-          <img src="../assets/icon.svg" alt="" class="change-currency" />
+          <button class="change-currency" />
         </div>
       </div>
       <img src="../assets/blue_arrow.svg" alt="" class="blue-arrow" />
@@ -133,14 +133,19 @@ img {
   margin-left: 10px;
 }
 .change-currency {
-  width: 13.5px;
-  height: 10px;
-  padding: 10px 10px;
-  border: 1px soid #cfdbd5;
+  background-color: white;
+  background-image: url("../assets/icon.svg");
+  background-size: 14px 11px;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 30.4px;
+  height: 30.4px;
+  border: 1px solid #cfdbd5;
   border-radius: 4.68px;
   position: absolute;
   top: 40px;
   right: 16px;
+  margin: 0;
 }
 .amount {
   font-size: 33px;
