@@ -16,7 +16,7 @@ export default {
   methods: {},
 };
 </script>
-<style>
+<style scoped>
 @font-face {
   font-family: "TT Firs Neue";
   /*src: url("@src/fonts/TTFirsNeue/TTFirsNeue-Black.woff"); */

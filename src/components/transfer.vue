@@ -17,22 +17,25 @@
           <p class="exchange-rate">0 BTC ≈ $0.00</p>
           <button class="change-currency" />
           <form>
-            <div class="wrapper-label-input">
-              <label>Pay with</label>
-              <select>
-                <option>Bitcoin</option>
-                <option>Currency2</option>
-                <option>Currency3</option>
-              </select>
+            <div class="wrapper-form-all">
+              <div class="wrapper-label-input">
+                <label>Pay with</label>
+                <select>
+                  <option>Bitcoin</option>
+                  <option>Currency2</option>
+                  <option>Currency3</option>
+                </select>
+              </div>
+              <div class="wrapper-label-input">
+                <label>Send to</label>
+                <input type="text" />
+              </div>
+              <div class="wrapper-label-input wrapper-label-input-last">
+                <label>Note</label>
+                <input type="text" placeholder="Type to add a note" />
+              </div>
             </div>
-            <div class="wrapper-label-input">
-              <label>Send to</label>
-              <input type="text" />
-            </div>
-            <div class="wrapper-label-input">
-              <label>Note</label>
-              <input type="text" />
-            </div>
+            <button class="button-continue-transfer">Continue transfer</button>
           </form>
         </div>
       </div>
@@ -69,7 +72,7 @@ export default {
 }
 .blue-arrow {
   position: absolute;
-  bottom: -40px;
+  bottom: -65px;
   right: 45%;
   rotate: 3deg;
   width: 235px;
@@ -92,10 +95,10 @@ export default {
 }
 .blue-coin {
   position: absolute;
-  bottom: -75px;
+  bottom: -90px;
   left: 55%;
-  width: 90px;
-  height: 95px;
+  width: 67px;
+  height: 76px;
 }
 figure {
   position: absolute;
@@ -108,14 +111,17 @@ img {
   width: auto;
   width: 100%;
 }
+
 .continue-transfer {
   height: 362px;
   min-width: 288px;
-  margin: 0 auto;
+  margin: 15px auto;
   background-color: #ffffff;
   position: absolute;
   top: 27px;
   z-index: 2;
+  border-radius: 7.02px;
+  box-shadow: 0px 6.001938819885254px 12.003877639770508px 0px #00000014;
 }
 .wrapper-buttons,
 .wrapper-amount-change {
@@ -124,6 +130,9 @@ img {
   width: 140px;
   margin: auto;
   position: relative;
+}
+.wrapper-buttons {
+  margin-top: 19.73px;
 }
 .wrapper-amount-change {
   flex-direction: column;
@@ -187,9 +196,12 @@ img {
 form {
   display: flex;
   flex-direction: column;
-  background-color: #f5f9fe;
   margin: 0 16px;
   width: auto;
+}
+.wrapper-form-all {
+  background-color: #f5f9fe;
+  border-radius: 9.36px;
 }
 label {
   width: 70px;
@@ -209,11 +221,31 @@ select {
   background-color: #f5f9fe;
   border: none;
 }
+input::placeholder {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 16.22px;
+}
 .wrapper-label-input {
   display: flex;
   height: 48px;
   align-items: center;
   margin: 0 18px 0 16px;
   border-bottom: 2px solid rgba(207, 219, 213, 0.6);
+}
+.wrapper-label-input-last {
+  border-bottom: none;
+}
+.button-continue-transfer {
+  width: 100%;
+  height: 41px;
+  border-radius: 6.2px;
+  border: 1px solid #3e8bf3;
+  background-color: #3e8bf3;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  display: block;
+  margin: 11px 0 16px 0;
 }
 </style>
