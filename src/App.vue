@@ -1,5 +1,5 @@
 <template>
-  <menuAside />
+  <menuAside v-bind:list="list" />
   <navigationTop />
   <launchApp />
   <transferContinue />
@@ -30,6 +30,7 @@ export default {
     countriesApp,
     faqAnswers,
   },
+  props: ["list"],
 };
 </script>
 

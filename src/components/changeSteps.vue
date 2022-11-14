@@ -55,6 +55,15 @@ figure {
   max-width: 320px;
   margin: auto;
 }
+.step {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 4px 16px 4px 16px;
+  width: fit-content;
+  background-color: #dfd3f7;
+  border-radius: 24px;
+}
 .image-step-zero {
   background-image: url("../assets/image-zer-step.svg");
 }
