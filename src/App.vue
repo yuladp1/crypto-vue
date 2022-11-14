@@ -1,4 +1,5 @@
 <template>
+  <menuAside />
   <navigationTop />
   <launchApp />
   <transferContinue />
@@ -9,6 +10,7 @@
 </template>
 
 <script>
+import menuAside from "./components/menuAside.vue";
 import navigationTop from "./components/navigation.vue";
 import launchApp from "./components/launchApp.vue";
 import transferContinue from "./components/transfer.vue";
@@ -19,6 +21,7 @@ import faqAnswers from "./components/faqAnswers.vue";
 export default {
   name: "App",
   components: {
+    menuAside,
     navigationTop,
     launchApp,
     transferContinue,

@@ -3,16 +3,27 @@
     <figure class="logo-image"></figure>
     <div class="container-button-and-menu">
       <button>Launch App</button>
-      <figure class="menu-image"></figure>
+      <figure class="menu-image" v-on:click="toggleShowMenu"></figure>
     </div>
+    <menuAside v-if="showMenu" />
   </nav>
 </template>
 
 <script>
+import menuAside from "./menuAside.vue";
 export default {
   name: "navigationTop",
-  data() {},
-  methods: {},
+  components: [menuAside],
+  data() {
+    return {
+      showMenu: false,
+    };
+  },
+  methods: {
+    toggleShowMenu() {
+      this.showMenu = !this.showMenu;
+    },
+  },
 };
 </script>
 <style scoped>
@@ -22,12 +33,14 @@ figure {
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
+  z-index: 7;
 }
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 68px;
+  position: relative;
 }
 nav .logo-image {
   width: 97px;
@@ -60,4 +73,15 @@ nav button {
   justify-content: flex-end;
   width: 50%;
 }
+menuAside {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 192px;
+  height: 600px;
+  z-index: 6;
+  background-color: white;
+}
 </style>
+
+MenuAside

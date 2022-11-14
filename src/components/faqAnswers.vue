@@ -4,7 +4,7 @@
   <ul>
     <div v-for="q in questions" :key="q.id">
       <li>{{ q }}<button v-on:click="toggleMethod">+</button></li>
-      <p v-if="showParagraf">
+      <p v-if="showParagraf" :class="showArticle">
         Staking is a method of verifying and securing transactions on proof of stake
         blockchains. It’s faster and more energy efficient than other methods such as
         proof of work. Plus, participants get rewarded for helping in the process. In
@@ -36,17 +36,26 @@ export default {
         "What’s the difference between staking and DeFi yield?",
       ],
       showParagraf: false,
+      showArticle: "",
     };
   },
   methods: {
     toggleMethod() {
       this.showParagraf = !this.showParagraf;
+      this.showArticle = "show";
     },
   },
 };
 </script>
 
 <style scoped>
+p {
+  height: 0;
+}
+.show {
+  height: auto;
+  width: auto;
+}
 ul {
   display: flex;
   flex-direction: column;
