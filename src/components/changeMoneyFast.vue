@@ -1,0 +1,55 @@
+<template>
+  <section class="">
+    <h1>Обменяйте средства за считанные минуты</h1>
+    <p>
+      Широкий спектр услуг по торговле и управлению цифровыми активами для удовлетворения
+    </p>
+    <button>Launch App</button>
+    <figure></figure>
+  </section>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style scoped>
+section {
+  background-color: #f5f9fe;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  padding: 32px 16px 16px 16px;
+}
+p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #6f767e;
+  text-align: center;
+  padding: 0 16px;
+}
+button {
+  width: 137px;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #3e8bf3;
+  background-color: #3e8bf3;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  display: block;
+  margin: 16px 0;
+}
+figure {
+  width: 288px;
+  height: 333px;
+  background-image: url("../assets/image-mobile.svg");
+}
+</style>

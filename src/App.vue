@@ -7,6 +7,8 @@
   <changeSteps />
   <countriesApp />
   <faqAnswers />
+  <changeMoneyFast />
+  <footerSocial />
 </template>
 
 <script>
@@ -18,6 +20,8 @@ import leadingPlatform from "./components/leadingPlatform.vue";
 import changeSteps from "./components/changeSteps.vue";
 import countriesApp from "./components/countriesApp.vue";
 import faqAnswers from "./components/faqAnswers.vue";
+import changeMoneyFast from "./components/changeMoneyFast.vue";
+import footerSocial from "./components/footerSocial.vue";
 export default {
   name: "App",
   components: {
@@ -29,6 +33,8 @@ export default {
     changeSteps,
     countriesApp,
     faqAnswers,
+    changeMoneyFast,
+    footerSocial,
   },
   props: ["list"],
 };
@@ -37,5 +43,11 @@ export default {
 <style>
 body {
   margin: 0;
+}
+figure {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
 }
 </style>
