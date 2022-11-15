@@ -3,7 +3,9 @@
   <p>Найдите ответы, на интересующие вопросы</p>
   <ul>
     <div v-for="q in questions" :key="q.id">
-      <li>{{ q }}<button v-on:click="toggleMethod">+</button></li>
+      <li>
+        {{ q }}<button v-on:click="toggleMethod" v-bind:class="buttonClicked"></button>
+      </li>
       <p v-if="showParagraf" :class="showArticle">
         Staking is a method of verifying and securing transactions on proof of stake
         blockchains. It’s faster and more energy efficient than other methods such as
@@ -37,18 +39,27 @@ export default {
       ],
       showParagraf: false,
       showArticle: "",
+      buttonClicked: "",
     };
   },
   methods: {
     toggleMethod() {
       this.showParagraf = !this.showParagraf;
       this.showArticle = "show";
+      if (this.showParagraf == true) {
+        this.buttonClicked = "button-active";
+      } else {
+        this.buttonClicked = "";
+      }
     },
   },
 };
 </script>
 
 <style scoped>
+.button-active {
+  background-image: url ("../assets/Minus.svg");
+}
 p {
   height: 0;
 }
@@ -78,5 +89,9 @@ li {
 button {
   margin-right: 0;
   margin-left: auto;
+  width: 24px;
+  height: 24px;
+  padding: 0 0;
+  background-image: url ("../assets/Add_Plus.svg");
 }
 </style>
