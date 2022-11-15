@@ -59,6 +59,7 @@ export default {
 <style scoped>
 .button-active {
   background-image: url ("../assets/Minus.svg");
+  background-color: aqua;
 }
 p {
   height: 0;
@@ -89,9 +90,9 @@ li {
 button {
   margin-right: 0;
   margin-left: auto;
-  width: 24px;
   height: 24px;
   padding: 0 0;
   background-image: url ("../assets/Add_Plus.svg");
+  min-width: 24px;
 }
 </style>
