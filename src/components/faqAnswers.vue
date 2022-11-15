@@ -63,6 +63,11 @@ export default {
 }
 p {
   height: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+  color: #6f767e;
 }
 .show {
   height: auto;
