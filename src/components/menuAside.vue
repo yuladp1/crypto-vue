@@ -2,9 +2,9 @@
   <aside>
     <nav>
       <ul>
-        <div v-for="l in list" :key="l.id">
-          <li>{{ l }}</li>
-        </div>
+        <li v-for="item in list" :key="item.id">
+          <p>{{ item }}</p>
+        </li>
       </ul>
       <h2>Choose language</h2>
       <div class="countries-list">
@@ -23,10 +23,10 @@
 
 <script>
 export default {
+  name: "MenuAside",
+  props: ["list"],
   data() {
-    return {
-      list: ["About", "How does it works", "Were we work", "FAQ", "Contacts"],
-    };
+    return {};
   },
 };
 </script>

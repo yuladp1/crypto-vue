@@ -5,19 +5,19 @@
       <button>Launch App</button>
       <figure class="menu-image" v-on:click="toggleShowMenu"></figure>
     </div>
-    <menuAside v-if="showMenu" v-bind:list="list" />
+    <MenuAside v-if="showMenu" v-bind:list="list" />
   </nav>
 </template>
 
 <script>
-import menuAside from "./menuAside.vue";
+import MenuAside from "./MenuAside.vue";
 export default {
   name: "navigationTop",
-  components: [menuAside],
-  props: ["list"],
+  components: [MenuAside],
   data() {
     return {
       showMenu: false,
+      list: ["About", "How does it works", "Were we work", "FAQ", "Contacts"],
     };
   },
   methods: {
