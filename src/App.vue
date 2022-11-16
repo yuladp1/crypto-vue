@@ -1,5 +1,4 @@
 <template>
-  <menuAside v-bind:list="list" />
   <navigationTop />
   <launchApp />
   <transferContinue />
@@ -12,7 +11,6 @@
 </template>
 
 <script>
-/*import menuAside from "./components/menuAside.vue";*/
 import navigationTop from "./components/navigation.vue";
 import launchApp from "./components/launchApp.vue";
 import transferContinue from "./components/transfer.vue";
@@ -25,7 +23,6 @@ import footerSocial from "./components/footerSocial.vue";
 export default {
   name: "App",
   components: {
-    /*menuAside, */
     navigationTop,
     launchApp,
     transferContinue,
@@ -36,7 +33,6 @@ export default {
     changeMoneyFast,
     footerSocial,
   },
-  /* props: ["list"],*/
 };
 </script>
 

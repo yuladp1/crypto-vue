@@ -33,8 +33,13 @@ export default {
 
 <style scoped>
 aside {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: white;
   width: 192px;
   height: 600px;
+  z-index: 6;
 }
 nav {
   width: 100%;
@@ -52,11 +57,18 @@ ul {
   justify-content: flex-start;
   align-items: flex-start;
   width: 144px;
-  height: 200px;
+  height: auto;
   padding-bottom: 24px;
   border-bottom: 1px solid #d9d9d9;
+  list-style-type: none;
 }
 li {
+  text-decoration: none;
+}
+ul:last-child {
+  padding-bottom: 24px;
+}
+p {
   list-style-type: none;
   color: black;
   width: 100%;
