@@ -5,7 +5,7 @@
   <leadingPlatform />
   <changeSteps />
   <countriesApp />
-  <faqAnswers />
+  <FaqAnswers v-bind:list="list" />
   <changeMoneyFast />
   <footerSocial />
 </template>
@@ -17,7 +17,7 @@ import transferContinue from "./components/transfer.vue";
 import leadingPlatform from "./components/leadingPlatform.vue";
 import changeSteps from "./components/changeSteps.vue";
 import countriesApp from "./components/countriesApp.vue";
-import faqAnswers from "./components/faqAnswers.vue";
+import FaqAnswers from "./components/FaqAnswers.vue";
 import changeMoneyFast from "./components/changeMoneyFast.vue";
 import footerSocial from "./components/footerSocial.vue";
 export default {
@@ -29,9 +29,20 @@ export default {
     leadingPlatform,
     changeSteps,
     countriesApp,
-    faqAnswers,
+    FaqAnswers,
     changeMoneyFast,
     footerSocial,
+  },
+  data() {
+    return {
+      list: [],
+    };
+  },
+  async mounted() {
+    const result = await fetch("./assets/list.json");
+    const data = await result.json();
+    this.list = data;
+    console.log(this.list);
   },
 };
 </script>

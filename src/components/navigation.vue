@@ -28,15 +28,6 @@ export default {
 };
 </script>
 <style scoped>
-MenuAside {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: white;
-  width: 192px;
-  height: 600px;
-  z-index: 6;
-}
 figure {
   display: block;
   margin-block-start: 0;
