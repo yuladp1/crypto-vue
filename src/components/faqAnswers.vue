@@ -1,14 +1,12 @@
 <template>
-  <h1>FAQ</h1>
-  <p>Найдите ответы, на интересующие вопросы</p>
   <ul>
-    <div v-for="items in list" :key="items.id">
+    <div>
       <li>
-        {{ items.articleTitle }}
+        {{ article.articleTitle }}
         <button v-on:click="toggleMethod" v-bind:class="buttonClicked"></button>
       </li>
       <p v-if="showParagraf">
-        {{ items.article }}
+        {{ article.article }}
       </p>
     </div>
   </ul>
@@ -17,7 +15,7 @@
 <script>
 export default {
   name: "FaqAnswers",
-  props: ["list"],
+  props: ["article"],
   data() {
     return {
       showParagraf: false,
@@ -44,14 +42,6 @@ export default {
   background-image: url ("../assets/Minus.svg");
   background-color: aqua;
 }
-p {
-  height: 0;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  text-align: left;
-  color: #6f767e;
-}
 
 ul {
   display: flex;
@@ -71,6 +61,13 @@ li {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+}
+p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+  color: #6f767e;
 }
 button {
   margin-right: 0;

@@ -5,7 +5,12 @@
   <leadingPlatform />
   <changeSteps />
   <countriesApp />
-  <FaqAnswers v-bind:list="list" />
+  <h1>FAQ</h1>
+  <p>Найдите ответы, на интересующие вопросы</p>
+  <div v-for="item in list" :key="item.id">
+    <FaqAnswers v-bind:article="item" />
+  </div>
+
   <changeMoneyFast />
   <footerSocial />
 </template>
@@ -36,10 +41,11 @@ export default {
   data() {
     return {
       list: [],
+      item: {},
     };
   },
   async mounted() {
-    const result = await fetch("./assets/list.json");
+    const result = await fetch("list.json");
     const data = await result.json();
     this.list = data;
     console.log(this.list);
@@ -56,5 +62,12 @@ figure {
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
+}
+p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+  color: #6f767e;
 }
 </style>
