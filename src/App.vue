@@ -1,18 +1,27 @@
 <template>
-  <navigationTop />
-  <launchApp />
-  <transferContinue />
-  <leadingPlatform />
-  <changeSteps />
-  <countriesApp />
-  <h1>FAQ</h1>
-  <p>Найдите ответы, на интересующие вопросы</p>
-  <div v-for="item in list" :key="item.id">
-    <FaqAnswers v-bind:article="item" />
-  </div>
+  <div class="wrapper-all">
+    <navigationTop />
+    <div class="wrapper">
+      <div class="wrapper-launchApp">
+        <launchApp />
+      </div>
+      <div class="wrapper-transferContinue">
+        <transferContinue />
+      </div>
+    </div>
 
-  <changeMoneyFast />
-  <footerSocial />
+    <leadingPlatform />
+    <changeSteps />
+    <countriesApp />
+    <h1>FAQ</h1>
+    <p>Найдите ответы, на интересующие вопросы</p>
+    <div v-for="item in list" :key="item.id">
+      <FaqAnswers v-bind:article="item" />
+    </div>
+
+    <changeMoneyFast />
+    <footerSocial />
+  </div>
 </template>
 
 <script>
@@ -54,8 +63,19 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: "TT Firs Neue";
+  src: url("./fonts/TTFirsNeue/TTFirsNeue-Light.woff");
+  /*src: url("src/fonts/TTFirsNeue/TTFirsNeue-Black.woff"); */
+}
 body {
   margin: 0;
+  font-family: "TT Firs Neue";
+}
+@media screen and (min-width: 721px) {
+  body {
+    background-color: #f5f9fe;
+  }
 }
 figure {
   margin-block-start: 0;
@@ -63,11 +83,31 @@ figure {
   margin-inline-start: 0;
   margin-inline-end: 0;
 }
+</style>
+<style scoped>
 p {
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
   text-align: left;
   color: #6f767e;
+}
+@media screen and (min-width: 721px) {
+  .wrapper {
+    position: relative;
+    height: 850px;
+  }
+  .wrapper-launchApp,
+  .wrapper-transferContinue {
+    position: absolute;
+    width: 100%;
+  }
+  .wrapper-transferContinue {
+    top: 65px;
+    height: 485px;
+  }
+  .wrapper-launchApp {
+    top: 520px;
+  }
 }
 </style>
