@@ -1,6 +1,7 @@
 <template>
   <nav>
     <figure class="logo-image"></figure>
+    <MenuAside v-if="islargeScreen" v-bind:list="list" />
     <div class="container-button-and-menu">
       <button>Launch App</button>
       <figure class="menu-image" v-on:click="toggleShowMenu"></figure>
@@ -14,6 +15,7 @@ import MenuAside from "./MenuAside.vue";
 export default {
   name: "navigationTop",
   components: { MenuAside },
+
   data() {
     return {
       showMenu: false,
@@ -124,6 +126,39 @@ export default {
     margin-left: 24px;
     margin-right: 24px;
     background-image: url("../assets/List.svg");
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 88px;
+    background-color: white;
+  }
+
+  nav .logo-image {
+    width: 129px;
+    height: 32px;
+    margin-left: 24px;
+    background-size: contain;
+    background-image: url("../assets/logo.svg");
+  }
+  nav button {
+    width: 121px;
+    height: 48px;
+    font-size: 16px;
+
+    border-radius: 8px;
+    border: 1px solid #3e8bf3;
+    background-color: #3e8bf3;
+    font-weight: 500;
+    color: white;
+    margin-right: 0;
+  }
+  nav .menu-image {
+    display: none;
   }
 }
 </style>

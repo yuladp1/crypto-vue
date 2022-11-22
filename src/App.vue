@@ -19,7 +19,7 @@
       <p>Найдите ответы, на интересующие вопросы</p>
     </div>
     <div v-for="item in list" :key="item.id">
-      <FaqAnswers v-bind:article="item" />
+      <FaqAnswers v-bind:article="item" v-bind:islargeScreen="islargeScreen" />
     </div>
 
     <changeMoneyFast />
@@ -54,13 +54,20 @@ export default {
     return {
       list: [],
       item: {},
+      windowWidth: 0,
+      islargeScreen: false,
     };
   },
   async mounted() {
     const result = await fetch("list.json");
     const data = await result.json();
     this.list = data;
-    console.log(this.list);
+    this.windowWidth = window.innerWidth;
+    console.log(this.windowWidth);
+    if (this.windowWidth >= 1000) {
+      this.islargeScreen = true;
+    }
+    console.log(this.islargeScreen);
   },
 };
 </script>
@@ -107,6 +114,7 @@ button:active {
   background-color: #295da2;
 }
 </style>
+
 <style scoped>
 p {
   font-size: 14px;
@@ -150,6 +158,26 @@ p {
     width: 25%;
     display: flex;
     align-items: center;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    height: 815px;
+  }
+  .wrapper-launchApp,
+  .wrapper-transferContinue {
+    width: 45%;
+  }
+  .wrapper-transferContinue {
+    position: relative;
+  }
+  .wrapper-launchApp {
+    position: relative;
+    top: auto;
   }
 }
 </style>

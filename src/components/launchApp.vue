@@ -64,7 +64,7 @@ export default {
     color: #6f767e;
   }
 }
-@media screen and (min-width: 721px) {
+@media screen and (min-width: 721px) and (max-width: 1440px) {
   section {
     background: #f5f9fe;
   }
@@ -79,6 +79,52 @@ export default {
     text-align: center;
     margin-block-start: 0;
     margin-block-end: 0;
+  }
+  button {
+    width: 159px;
+    height: 64px;
+    border-radius: 8px;
+    border: 1px solid #3e8bf3;
+    background-color: #3e8bf3;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    display: block;
+    margin: 24px auto;
+  }
+  .wrapper-icon-and-working-smart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 60px;
+  }
+  .icon-copy {
+    background-image: url("../assets/ClipboardText.svg");
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    margin-inline-start: 0px;
+  }
+  .working-smart {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #6f767e;
+  }
+}
+@media screen and (min-width: 1441px) {
+  section {
+    background: #f5f9fe;
+  }
+  .title-change-crypto {
+    padding: 186px 0 32px 108px;
+    color: black;
+    font-family: "TT Firs Neue";
+    font-weight: 700;
+    font-style: normal;
+    font-size: 64px;
+    line-height: 72px;
+    text-align: center;
   }
   button {
     width: 159px;
