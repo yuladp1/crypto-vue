@@ -96,6 +96,16 @@ ul {
   margin-inline-end: 0px;
   padding-inline-start: 0px;
 }
+h2 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+button:hover {
+  background-color: #3474ca;
+}
+button:active {
+  background-color: #295da2;
+}
 </style>
 <style scoped>
 p {
