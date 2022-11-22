@@ -55,4 +55,48 @@ export default {};
     background-image: url("../assets/image-mobile.svg");
   }
 }
+
+@media screen and (min-width: 721px) and (max-width: 1440px) {
+  section {
+    background-color: #f5f9fe;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    padding: 80px 90px 32px 80px;
+    text-align: center;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    color: #6f767e;
+    text-align: center;
+    padding: 0 115px 32px 115px;
+  }
+  button {
+    width: 148px;
+    height: 56px;
+    border-radius: 8px;
+    border: 1px solid #3e8bf3;
+    background-color: #3e8bf3;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    display: block;
+    margin: 16px 0;
+  }
+  figure {
+    width: 456px;
+    height: 528px;
+    background-image: url("../assets/image-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
 </style>

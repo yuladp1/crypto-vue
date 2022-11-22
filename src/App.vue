@@ -13,8 +13,11 @@
     <leadingPlatform />
     <changeSteps />
     <countriesApp />
-    <h1>FAQ</h1>
-    <p>Найдите ответы, на интересующие вопросы</p>
+
+    <div class="wrapper-FaqAnswers">
+      <h1>FAQ</h1>
+      <p>Найдите ответы, на интересующие вопросы</p>
+    </div>
     <div v-for="item in list" :key="item.id">
       <FaqAnswers v-bind:article="item" />
     </div>
@@ -70,6 +73,8 @@ export default {
 }
 body {
   margin: 0;
+  overflow-y: auto;
+  overflow-x: auto;
   font-family: "TT Firs Neue";
 }
 @media screen and (min-width: 721px) {
@@ -82,6 +87,14 @@ figure {
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
+  padding-inline-start: 0;
+}
+ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
 }
 </style>
 <style scoped>
@@ -108,6 +121,25 @@ p {
   }
   .wrapper-launchApp {
     top: 520px;
+  }
+  .wrapper-FaqAnswers {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 24px 50px 24px;
+  }
+  .wrapper-FaqAnswers > h1 {
+    font-size: 48px;
+    font-weight: 700px;
+  }
+  .wrapper-FaqAnswers > p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700px;
+    width: 25%;
+    display: flex;
+    align-items: center;
   }
 }
 </style>
