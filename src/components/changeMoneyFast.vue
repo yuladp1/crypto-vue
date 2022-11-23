@@ -1,10 +1,13 @@
 <template>
-  <section class="">
-    <h1>Обменяйте средства за считанные минуты</h1>
-    <p>
-      Широкий спектр услуг по торговле и управлению цифровыми активами для удовлетворения
-    </p>
-    <button>Launch App</button>
+  <section>
+    <div class="wrapper-large-text-and-button">
+      <h1>Обменяйте средства за считанные минуты</h1>
+      <p>
+        Широкий спектр услуг по торговле и управлению цифровыми активами для
+        удовлетворения
+      </p>
+      <button>Launch App</button>
+    </div>
     <figure></figure>
   </section>
 </template>
@@ -94,6 +97,56 @@ export default {};
   figure {
     width: 456px;
     height: 528px;
+    background-image: url("../assets/image-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  section {
+    background-color: #f5f9fe;
+    width: 100%;
+    height: 520px;
+    display: flex;
+    align-items: center;
+    gap: 192px;
+  }
+  .wrapper-large-text-and-button {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 542px;
+    flex-grow: 1;
+    padding-left: 108px;
+  }
+  h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    color: #6f767e;
+  }
+  button {
+    width: 148px;
+    height: 56px;
+    border-radius: 8px;
+    border: 1px solid #3e8bf3;
+    background-color: #3e8bf3;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    display: block;
+    margin: 16px 0;
+  }
+  figure {
+    width: 505px;
+    height: 600px;
+    align-self: flex-end;
+    overflow-y: visible;
     background-image: url("../assets/image-mobile.svg");
     background-repeat: no-repeat;
     background-size: cover;

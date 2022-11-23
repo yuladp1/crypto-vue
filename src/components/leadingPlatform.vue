@@ -52,4 +52,28 @@
     line-height: 32px;
   }
 }
+
+@media screen and (min-width: 1441px) {
+  .lead-platform {
+    display: flex;
+    gap: 174px;
+    border-bottom: 2px solid rgba(207, 219, 213, 0.6);
+    background-color: white;
+    padding: 120px 108px;
+  }
+  h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    flex-basis: 550px;
+    flex-grow: 1;
+  }
+  article {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    flex-basis: 550px;
+    flex-grow: 1;
+  }
+}
 </style>

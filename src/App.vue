@@ -14,12 +14,16 @@
     <changeSteps />
     <countriesApp />
 
-    <div class="wrapper-FaqAnswers">
-      <h1>FAQ</h1>
-      <p>Найдите ответы, на интересующие вопросы</p>
-    </div>
-    <div v-for="item in list" :key="item.id">
-      <FaqAnswers v-bind:article="item" v-bind:islargeScreen="islargeScreen" />
+    <div class="wrapper-FaqAnswers-large">
+      <div class="wrapper-FaqAnswers">
+        <h1>FAQ</h1>
+        <p>Найдите ответы, на интересующие вопросы</p>
+      </div>
+      <div class="wrapper-items-large">
+        <div v-for="item in list" :key="item.id">
+          <FaqAnswers v-bind:article="item" v-bind:islargeScreen="islargeScreen" />
+        </div>
+      </div>
     </div>
 
     <changeMoneyFast />
@@ -103,6 +107,11 @@ ul {
   margin-inline-end: 0px;
   padding-inline-start: 0px;
 }
+h1 {
+  font-size: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
 h2 {
   margin-block-start: 0;
   margin-block-end: 0;
@@ -178,6 +187,23 @@ p {
   .wrapper-launchApp {
     position: relative;
     top: auto;
+  }
+  .wrapper-FaqAnswers-large {
+    background-color: white;
+    display: flex;
+    width: 100%;
+    padding: 120px 108px;
+  }
+  .wrapper-FaqAnswers {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 0;
+    flex-direction: column;
+    flex-basis: 222px;
+  }
+  .wrapper-items-large {
+    flex-basis: 780px;
+    flex-grow: 1;
   }
 }
 </style>

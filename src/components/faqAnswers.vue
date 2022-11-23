@@ -116,4 +116,44 @@ export default {
     min-width: 24px;
   }
 }
+
+@media screen and (min-width: 1441px) {
+  .button-active {
+    background-image: url("../assets/Minus.svg");
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 16px 24px;
+  }
+  li {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-top: 2px solid rgba(207, 219, 213, 0.6);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    color: #6f767e;
+  }
+  figure {
+    margin-right: 0;
+    margin-left: auto;
+    width: 24px;
+    height: 24px;
+    padding: 0 0;
+    background-image: url ("../assets/Add_Plus.svg");
+    min-width: 24px;
+  }
+}
 </style>

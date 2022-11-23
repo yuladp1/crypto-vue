@@ -113,4 +113,55 @@ export default {};
     height: auto;
   }
 }
+
+@media screen and (min-width: 1441px) {
+  footer {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    padding-left: 108px;
+  }
+  .wrapper-terms-of-use {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: 212px;
+  }
+  .wrapper-terms-of-use a {
+    text-decoration: none;
+    color: #6f767e;
+  }
+  .terms {
+    padding-right: 24px;
+  }
+  h2,
+  p,
+  .wrapper-terms-of-use {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #6f767e;
+  }
+  p {
+    padding-right: 24px;
+  }
+  h2 {
+    margin-right: 24px;
+    margin-left: auto;
+  }
+  .wrapper-social-networks {
+    width: 184px;
+    display: flex;
+    justify-content: space-between;
+  }
+  figure {
+    width: 40px;
+    height: 40px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
 </style>
