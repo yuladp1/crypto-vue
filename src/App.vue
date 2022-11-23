@@ -88,6 +88,9 @@ body {
   overflow-x: auto;
   font-family: "TT Firs Neue";
 }
+.wrapper-all {
+  width: 100%;
+}
 @media screen and (min-width: 721px) {
   body {
     background-color: #f5f9fe;
