@@ -73,7 +73,7 @@ export default {
     width: 24px;
     height: 24px;
     padding: 0 0;
-    background-image: url ("../assets/Add_Plus.svg");
+    background-image: url ("../assets/addplus.svg");
     min-width: 24px;
   }
 }
@@ -112,7 +112,7 @@ export default {
     width: 24px;
     height: 24px;
     padding: 0 0;
-    background-image: url ("../assets/Add_Plus.svg");
+    background-image: url ("../assets/addplus.svg");
     min-width: 24px;
   }
 }
@@ -152,7 +152,7 @@ export default {
     width: 24px;
     height: 24px;
     padding: 0 0;
-    background-image: url ("../assets/Add_Plus.svg");
+    background-image: url ("../assets/addplus.svg");
     min-width: 24px;
   }
 }

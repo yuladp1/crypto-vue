@@ -24,7 +24,7 @@
 <script>
 export default {
   name: "MenuAside",
-  props: ["list", "islargeScreen"],
+  props: ["list"],
   data() {
     return {};
   },
@@ -33,7 +33,9 @@ export default {
 
 <style scoped>
 @media screen and (min-width: 320px) and (max-width: 720px) {
-  aside {
+  nav {
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     right: 0;
@@ -41,10 +43,6 @@ export default {
     width: 192px;
     height: 600px;
     z-index: 6;
-  }
-  nav {
-    width: 100%;
-    height: 100%;
   }
   ul {
     margin-block-start: 0;
@@ -203,7 +201,9 @@ export default {
 }
 
 @media screen and (min-width: 320px) and (max-width: 720px) {
-  aside {
+  nav {
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     right: 0;
@@ -211,10 +211,6 @@ export default {
     width: 192px;
     height: 600px;
     z-index: 6;
-  }
-  nav {
-    width: 100%;
-    height: 100%;
   }
   ul {
     margin-block-start: 0;
@@ -296,16 +292,12 @@ export default {
   nav {
     width: 100%;
     height: 100%;
+    display: flex;
   }
   ul {
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 0px;
     margin: 84px auto 24px 32px;
     display: flex;
-    flex-direction: column;
+
     justify-content: flex-start;
     align-items: flex-start;
     width: auto;

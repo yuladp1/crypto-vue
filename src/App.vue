@@ -21,7 +21,7 @@
       </div>
       <div class="wrapper-items-large">
         <div v-for="item in list" :key="item.id">
-          <FaqAnswers v-bind:article="item" v-bind:islargeScreen="islargeScreen" />
+          <FaqAnswers v-bind:article="item" />
         </div>
       </div>
     </div>
@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import navigationTop from "./components/navigation.vue";
+import navigationTop from "./components/navigationTop.vue";
 import launchApp from "./components/launchApp.vue";
 import transferContinue from "./components/transfer.vue";
 import leadingPlatform from "./components/leadingPlatform.vue";
@@ -58,20 +58,12 @@ export default {
     return {
       list: [],
       item: {},
-      windowWidth: 0,
-      islargeScreen: false,
     };
   },
   async mounted() {
     const result = await fetch("list.json");
     const data = await result.json();
     this.list = data;
-    this.windowWidth = window.innerWidth;
-    console.log(this.windowWidth);
-    if (this.windowWidth >= 1000) {
-      this.islargeScreen = true;
-    }
-    console.log(this.islargeScreen);
   },
 };
 </script>
@@ -87,6 +79,7 @@ body {
   overflow-y: auto;
   overflow-x: auto;
   font-family: "TT Firs Neue";
+  box-sizing: border-box;
 }
 .wrapper-all {
   width: 100%;
