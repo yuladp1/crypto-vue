@@ -1,11 +1,10 @@
 <template>
-  <section class="lead-platform">
-    <h1>Ведущая платформа для торговли цифровыми активами</h1>
+  <section class="lead-platform" id="about">
+    <h1>Leading digital asset trading platform</h1>
     <article>
-      Широкий спектр услуг по торговле и управлению цифровыми активами для удовлетворения
-      разнообразных торговых потребностей. Всесторонняя защита пользовательских активов с
-      нашим автономным хранилищем, многофакторным шифрованием и круглосуточным
-      мониторингом безопасности.
+      A wide range of digital asset trading and management services to meet variety of
+      trading needs. Comprehensive protection of user assets with our offline storage,
+      multi-factor encryption and 24/7 security monitoring.
     </article>
   </section>
 </template>

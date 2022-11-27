@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer id="contacts">
     <p>© DEPO 2022</p>
     <div class="wrapper-terms-of-use">
       <a href="" class="terms">Terms of Use</a>

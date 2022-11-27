@@ -1,10 +1,10 @@
 <template>
   <section>
-    <p class="title-change-crypto">Обменивай крипту и фиат без ограничений</p>
+    <p class="title-change-crypto">Exchange crypto and fiat without limits</p>
     <button>Launch App</button>
     <div class="wrapper-icon-and-working-smart">
       <figure class="icon-copy"></figure>
-      <p class="working-smart">Работает на смарт-контрактах</p>
+      <p class="working-smart">Works on smart contracts</p>
     </div>
   </section>
 </template>

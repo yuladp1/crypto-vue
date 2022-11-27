@@ -3,8 +3,10 @@
     <figure class="logo-image"></figure>
     <nav v-if="islargeScreen" class="menu-large-screen">
       <ul class="menu-large-screen-ul">
-        <li v-for="item in list" :key="item.id">
-          <p>{{ item }}</p>
+        <li v-for="item in list1" :key="item.id">
+          <p>
+            <a :href="item.scrollTo">{{ item.title }}</a>
+          </p>
         </li>
       </ul>
     </nav>
@@ -30,8 +32,10 @@
 
     <nav v-if="showMenu" class="menu-medium-screen">
       <ul>
-        <li v-for="item in list" :key="item.id">
-          <p>{{ item }}</p>
+        <li v-for="item in list1" :key="item.id">
+          <p>
+            <a :href="item.scrollTo">{{ item.title }}</a>
+          </p>
         </li>
       </ul>
       <h2>Choose language</h2>
@@ -58,7 +62,13 @@ export default {
     return {
       showMenu: false,
       islargeScreen: false,
-      list: ["About", "How does it works", "Were we work", "FAQ", "Contacts"],
+      list1: [
+        { title: "About", scrollTo: "#about" },
+        { title: "How does it works", scrollTo: "#how-work" },
+        { title: "Were we work", scrollTo: "#were-work" },
+        { title: "FAQ", scrollTo: "#faq" },
+        { title: "Contacts", scrollTo: "#contacts" },
+      ],
       windowWidth: null,
     };
   },

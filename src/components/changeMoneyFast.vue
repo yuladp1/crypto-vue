@@ -1,11 +1,8 @@
 <template>
   <section>
     <div class="wrapper-large-text-and-button">
-      <h1>Обменяйте средства за считанные минуты</h1>
-      <p>
-        Широкий спектр услуг по торговле и управлению цифровыми активами для
-        удовлетворения
-      </p>
+      <h1>Exchange funds in minutes</h1>
+      <p>A wide range of digital asset trading and management services</p>
       <button>Launch App</button>
     </div>
     <figure></figure>

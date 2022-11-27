@@ -1,10 +1,10 @@
 <template>
-  <div class="wrapper-all-content">
+  <div class="wrapper-all-content" id="were-work">
     <section>
-      <h1>Страны, с которыми уже работает сервис</h1>
+      <h1>Countries with which the service is already working</h1>
       <div class="wrapper-buttons-medium">
         <button class="button-launch-app">Launch App</button>
-        <button class="button-country">Подключить мою страну</button>
+        <button class="button-country">Connect my country</button>
       </div>
     </section>
 

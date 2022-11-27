@@ -1,37 +1,28 @@
 <template>
-  <div class="wrapper-sections-steps">
+  <div class="wrapper-sections-steps" id="how-work">
     <section class="wrapper-large-screen">
-      <h1 class="h-medium-width">Совершите обмен за 3 шага</h1>
-      <button class="button-start-transfer-medium">Начать обмен</button>
+      <h1 class="h-medium-width">Make an exchange in 3 steps</h1>
+      <button class="button-start-transfer-medium">Start exchange</button>
     </section>
     <div class="wrapper-steps">
       <section>
         <figure class="image-step-zero"></figure>
-        <div class="step">Шаг 1</div>
-        <h1>Создай или найди сделку</h1>
-        <p>
-          Широкий спектр услуг по торговле и управлению цифровыми активами для
-          удовлетворения
-        </p>
+        <div class="step">Step 1</div>
+        <h1>Create or find a deal</h1>
+        <p>A wide range of digital asset trading and management services</p>
       </section>
       <section>
         <figure class="image-step-one"></figure>
-        <div class="step">Шаг 2</div>
-        <h1>Безопасно переведи средства</h1>
-        <p>
-          Широкий спектр услуг по торговле и управлению цифровыми активами для
-          удовлетворения
-        </p>
+        <div class="step">Step 2</div>
+        <h1>Transfer funds securely</h1>
+        <p>A wide range of digital asset trading and management services</p>
       </section>
       <section class="last-section">
         <figure class="image-step-two"></figure>
-        <div class="step">Шаг 3</div>
-        <h1>Заверши обмен</h1>
-        <p>
-          Широкий спектр услуг по торговле и управлению цифровыми активами для
-          удовлетворения
-        </p>
-        <button class="button-start-transfer-mobile">Начать обмен</button>
+        <div class="step">Step 3</div>
+        <h1>Complete the exchange</h1>
+        <p>A wide range of digital asset trading and management services</p>
+        <button class="button-start-transfer-mobile">Start exchange</button>
       </section>
     </div>
   </div>

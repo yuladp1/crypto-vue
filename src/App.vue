@@ -16,7 +16,7 @@
 
     <div class="wrapper-FaqAnswers-large">
       <div class="wrapper-FaqAnswers">
-        <h1>FAQ</h1>
+        <h1 id="faq">FAQ</h1>
         <p>Найдите ответы, на интересующие вопросы</p>
       </div>
       <div class="wrapper-items-large">
