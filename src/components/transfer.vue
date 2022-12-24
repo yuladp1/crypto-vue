@@ -1,46 +1,49 @@
 <template>
-  <section>
-    <div class="wrapper-continue-transfer">
-      <img src="../assets/green_arrow.svg" alt="" class="green-arrow" />
-      <img src="../assets/usd.svg" alt="" class="green-coin" />
-      <img src="../assets/bsd.svg" alt="" class="yellow-coin" />
-      <figure>
-        <img src="../assets/blueCircle.svg" alt="" />
-      </figure>
-      <div class="continue-transfer">
-        <div class="wrapper-buttons">
-          <button class="send">Send</button>
-          <button class="recieve">Recieve</button>
-        </div>
-        <div class="wrapper-amount-change">
-          <p class="amount">$350.00</p>
-          <p class="exchange-rate">0 BTC ≈ $0.00</p>
-          <button class="change-currency" />
-          <form>
-            <div class="wrapper-form-all">
-              <div class="wrapper-label-input">
-                <label>Pay with</label>
-                <select>
-                  <option>Bitcoin</option>
-                  <option>Currency2</option>
-                  <option>Currency3</option>
-                </select>
-              </div>
-              <div class="wrapper-label-input">
-                <label>Send to</label>
-                <input type="text" />
-              </div>
-              <div class="wrapper-label-input wrapper-label-input-last">
-                <label>Note</label>
-                <input type="text" placeholder="Type to add a note" />
-              </div>
+  <section class="page__transfer transfer">
+    <div class="transfer__wrapper _container">
+      <div class="transfer__content">
+        <h1 class="transfer__content-title">Exchange crypto and fiat without limits</h1>
+        <button class="transfer__content-button button-blue">Launch App</button>
+        <p class="transfer__content-text">Works on smart contracts</p>
+      </div>
+
+      <div class="transfer__wrapper-form">
+        <div class="transfer__form">
+          <div class="transfer__form__buttons buttons-form">
+            <button class="buttons-form__black">Send</button>
+            <button class="buttons-form__white">Recieve</button>
+          </div>
+          <div class="transfer__form-currency currency">
+            <div class="currency__wrapper">
+              <p class="currency__amount">$350.00</p>
+              <p class="currency__exchange-rate">0 BTC ≈ $0.00</p>
             </div>
-            <button class="button-continue-transfer">Continue transfer</button>
+            <div class="currency__button">
+              <img src="../assets/images/transfer-images/arrows.svg" alt="" />
+            </div>
+          </div>
+
+          <form class="transfer__inputs">
+            <div class="transfer__inputs-wrapper-input">
+              <label>Pay with</label>
+              <select>
+                <option class="bitcoin">Bitcoin</option>
+                <option>Currency2</option>
+                <option>Currency3</option>
+              </select>
+            </div>
+            <div class="transfer__inputs-wrapper-input">
+              <label>Send to</label>
+              <input class="input-phone" type="text" placeholder="+995 590 558 124" />
+            </div>
+            <div class="transfer__inputs-wrapper-input">
+              <label>Note</label>
+              <input type="text" placeholder="Type to add a note" />
+            </div>
           </form>
+          <div class="button-continue-transfer button-blue">Continue transfer</div>
         </div>
       </div>
-      <img src="../assets/blue_arrow.svg" alt="" class="blue-arrow" />
-      <img src="../assets/bluecoin.svg" alt="" class="blue-coin" />
     </div>
   </section>
 </template>
@@ -48,594 +51,225 @@
 <script>
 export default {
   name: "transferContinue",
-  data() {},
-  methods: {},
 };
 </script>
 <style scoped>
-@media screen and (min-width: 320px) and (max-width: 720px) {
-  .wrapper-continue-transfer {
-    width: 100%;
-    height: 418px;
-    background-color: #f5f9fe;
-    position: relative;
-    display: flex;
-    justify-content: center;
-  }
-  .green-arrow {
-    position: absolute;
-    top: -40px;
-    left: 45%;
-    rotate: 3deg;
-    width: 235px;
-    height: 215px;
-  }
-  .blue-arrow {
-    position: absolute;
-    bottom: -65px;
-    right: 45%;
-    rotate: 3deg;
-    width: 235px;
-    height: 215px;
-  }
-  .green-coin {
-    position: absolute;
-    top: -35px;
-    right: 60%;
-    width: 92px;
-    height: 82px;
-    z-index: 3;
-  }
-  .yellow-coin {
-    position: absolute;
-    top: -45px;
-    right: 50%;
-    width: 34px;
-    height: 35px;
-  }
-  .blue-coin {
-    position: absolute;
-    bottom: -90px;
-    left: 55%;
-    width: 67px;
-    height: 76px;
-  }
-  figure {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 418px;
-  }
-  img {
-    height: 100%;
-    width: auto;
-    width: 100%;
-  }
-
-  .continue-transfer {
-    height: 362px;
-    min-width: 288px;
-    margin: 15px auto;
-    background-color: #ffffff;
-    position: absolute;
-    top: 27px;
-    z-index: 2;
-    border-radius: 7.02px;
-    box-shadow: 0px 6.001938819885254px 12.003877639770508px 0px #00000014;
-  }
-  .wrapper-buttons,
-  .wrapper-amount-change {
-    display: flex;
-    justify-items: center;
-    width: 140px;
-    margin: auto;
-    position: relative;
-  }
-  .wrapper-buttons {
-    margin-top: 19.73px;
-  }
-  .wrapper-amount-change {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  .send,
-  .recieve {
-    font-size: 12px;
-    font-weight: 400;
-    padding: 7px;
-    color: black;
-    background-color: #ffffff;
-    border-radius: 6.2px;
-    border: 1px solid white;
-    width: 65px;
-  }
-  .send:hover,
-  .recieve:hover {
-    color: white;
-    background-color: black;
-    border-radius: 6.2px;
-    border: 1px solid black;
-  }
-  .recieve {
-    margin-left: 10px;
-  }
-  .change-currency {
-    background-color: white;
-    background-image: url("../assets/icon.svg");
-    background-size: 14px 11px;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 30.4px;
-    height: 30.4px;
-    border: 1px solid #cfdbd5;
-    border-radius: 4.68px;
-    position: absolute;
-    top: 40px;
-    right: 16px;
-    margin: 0;
-  }
-  .amount {
-    font-size: 33px;
-    font-weight: 800;
-    line-height: 40px;
-    margin: 27px 0 0 0;
-  }
-  .exchange-rate {
-    margin-block-start: 0;
-    font-size: 8.2px;
-    font-weight: 400;
-    line-height: 12.28px;
-    color: #5d5d5b;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    margin: 0 16px;
-    width: auto;
-  }
-  .wrapper-form-all {
-    background-color: #f5f9fe;
-    border-radius: 9.36px;
-  }
-  label {
-    width: 70px;
-    font-size: 9.31px;
-    font-weight: 500;
-    line-height: 14px;
-    color: #5d5d5b;
-  }
-
-  input,
-  select {
-    width: 140px;
-    height: 43px;
-    font-size: 11px;
-    font-weight: 700;
-    line-height: 16.22px;
-    background-color: #f5f9fe;
-    border: none;
-  }
-  input::placeholder {
-    font-size: 11px;
-    font-weight: 400;
-    line-height: 16.22px;
-  }
-  .wrapper-label-input {
-    display: flex;
-    height: 48px;
-    align-items: center;
-    margin: 0 18px 0 16px;
-    border-bottom: 2px solid rgba(207, 219, 213, 0.6);
-  }
-  .wrapper-label-input-last {
-    border-bottom: none;
-  }
-  .button-continue-transfer {
-    width: 100%;
-    height: 41px;
-    border-radius: 6.2px;
-    border: 1px solid #3e8bf3;
-    background-color: #3e8bf3;
-    font-size: 14px;
-    font-weight: 700;
-    color: white;
-    display: block;
-    margin: 11px 0 16px 0;
-  }
+.transfer {
+  background: #f5f9fe;
 }
-@media screen and (min-width: 721px) and (max-width: 1440px) {
-  section {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  .wrapper-continue-transfer {
-    width: 100%;
-    height: 418px;
-    background-color: #f5f9fe;
-    position: relative;
-    display: flex;
-    justify-content: center;
-  }
-  .green-arrow {
-    position: absolute;
-    top: -40px;
-    left: 48%;
-    rotate: 3deg;
-    width: 235px;
-    height: 215px;
-  }
-  .blue-arrow {
-    position: absolute;
-    bottom: -63px;
-    right: 45%;
-    rotate: 344deg;
-    width: 235px;
-    height: 215px;
-  }
-  .green-coin {
-    position: absolute;
-    top: -35px;
-    right: 60%;
-    width: 92px;
-    height: 82px;
-    z-index: 3;
-  }
-  .yellow-coin {
-    position: absolute;
-    top: -45px;
-    right: 50%;
-    width: 34px;
-    height: 35px;
-  }
-  .blue-coin {
-    position: absolute;
-    bottom: -90px;
-    left: 55%;
-    width: 67px;
-    height: 76px;
-  }
-  figure {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 418px;
-  }
-  img {
-    height: 100%;
-    width: auto;
-    width: 100%;
-  }
-
-  .continue-transfer {
-    height: 362px;
-    min-width: 288px;
-    margin: 15px auto;
-    background-color: #ffffff;
-    position: absolute;
-    top: 27px;
-    z-index: 2;
-    border-radius: 7.02px;
-    box-shadow: 0px 6.001938819885254px 12.003877639770508px 0px #00000014;
-  }
-  .wrapper-buttons,
-  .wrapper-amount-change {
-    display: flex;
-    justify-items: center;
-    width: 140px;
-    margin: auto;
-    position: relative;
-  }
-  .wrapper-buttons {
-    margin-top: 19.73px;
-  }
-  .wrapper-amount-change {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  .send,
-  .recieve {
-    font-size: 12px;
-    font-weight: 400;
-    padding: 7px;
-    color: black;
-    background-color: #ffffff;
-    border-radius: 6.2px;
-    border: 1px solid white;
-    width: 65px;
-  }
-  .send:hover,
-  .recieve:hover {
-    color: white;
-    background-color: black;
-    border-radius: 6.2px;
-    border: 1px solid black;
-  }
-  .recieve {
-    margin-left: 10px;
-  }
-  .change-currency {
-    background-color: white;
-    background-image: url("../assets/icon.svg");
-    background-size: 14px 11px;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 30.4px;
-    height: 30.4px;
-    border: 1px solid #cfdbd5;
-    border-radius: 4.68px;
-    position: absolute;
-    top: 40px;
-    right: 16px;
-    margin: 0;
-  }
-  .amount {
-    font-size: 33px;
-    font-weight: 800;
-    line-height: 40px;
-    margin: 27px 0 0 0;
-  }
-  .exchange-rate {
-    margin-block-start: 0;
-    font-size: 8.2px;
-    font-weight: 400;
-    line-height: 12.28px;
-    color: #5d5d5b;
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-    margin: 0 16px;
-    width: auto;
-  }
-  .wrapper-form-all {
-    background-color: #f5f9fe;
-    border-radius: 9.36px;
-  }
-  label {
-    width: 70px;
-    font-size: 9.31px;
-    font-weight: 500;
-    line-height: 14px;
-    color: #5d5d5b;
-  }
-
-  input,
-  select {
-    width: 140px;
-    height: 43px;
-    font-size: 11px;
-    font-weight: 700;
-    line-height: 16.22px;
-    background-color: #f5f9fe;
-    border: none;
-  }
-  input::placeholder {
-    font-size: 11px;
-    font-weight: 400;
-    line-height: 16.22px;
-  }
-  .wrapper-label-input {
-    display: flex;
-    height: 48px;
-    align-items: center;
-    margin: 0 18px 0 16px;
-    border-bottom: 2px solid rgba(207, 219, 213, 0.6);
-  }
-  .wrapper-label-input-last {
-    border-bottom: none;
-  }
-  .button-continue-transfer {
-    width: 100%;
-    height: 41px;
-    border-radius: 6.2px;
-    border: 1px solid #3e8bf3;
-    background-color: #3e8bf3;
-    font-size: 14px;
-    font-weight: 700;
-    color: white;
-    display: block;
-    margin: 11px 0 16px 0;
-  }
+.transfer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.transfer__content {
+  flex: 0 1 50%;
+  justify-items: flex-start;
+  padding: 75px 0 47px 0;
+}
+.transfer__content > *:not(:last-child) {
+  margin-bottom: 32px;
+}
+.transfer__content-title {
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 72px;
+  color: #000000;
+}
+.transfer__content-button {
+  font-size: 20px;
+  line-height: 32px;
+}
+.transfer__content-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #6f767e;
+  padding-left: 32px;
+  position: relative;
+}
+.transfer__content-text::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url("../assets/images/transfer-images/ClipboardText.svg");
+  background-position: center;
+  position: absolute;
+  left: 0;
+}
+.transfer__wrapper-form {
+  flex: 0 1 auto;
+  background-image: url("../assets/images/transfer-images/blueCircle.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 75px;
+  margin: 75px 0 47px 0;
+}
+.transfer__form {
+  background: white;
+  padding: 19.19px 18.39px 18.14px 19.61px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 455px;
+  position: relative;
+}
+.transfer__form::before {
+  content: "";
+  width: 143px;
+  height: 135px;
+  background-image: url("../assets/images/transfer-images/usdCoin.png");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  left: -72px;
+  top: -66px;
+  z-index: 1;
+}
+.transfer__form::after {
+  content: "";
+  width: 120px;
+  height: 129px;
+  background-image: url("../assets/images/transfer-images/ethereumCoin.png");
+  background-position: center;
+  position: absolute;
+  right: -60px;
+  bottom: -60px;
+  z-index: 1;
 }
 
-@media screen and (min-width: 1441px) {
-  section {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  .wrapper-continue-transfer {
-    width: 100%;
-    height: 418px;
-    background-color: #f5f9fe;
-    position: relative;
-    display: flex;
-    justify-content: center;
-  }
-  .green-arrow {
-    position: absolute;
-    top: -40px;
-    left: 48%;
-    rotate: 3deg;
-    width: 235px;
-    height: 215px;
-  }
-  .blue-arrow {
-    position: absolute;
-    bottom: -63px;
-    right: 45%;
-    rotate: 344deg;
-    width: 235px;
-    height: 215px;
-  }
-  .green-coin {
-    position: absolute;
-    top: -35px;
-    right: 60%;
-    width: 92px;
-    height: 82px;
-    z-index: 3;
-  }
-  .yellow-coin {
-    position: absolute;
-    top: -45px;
-    right: 50%;
-    width: 34px;
-    height: 35px;
-  }
-  .blue-coin {
-    position: absolute;
-    bottom: -90px;
-    left: 55%;
-    width: 67px;
-    height: 76px;
-  }
-  figure {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 418px;
-  }
-  img {
-    height: 100%;
-    width: auto;
-    width: 100%;
-  }
+.buttons-form {
+  display: flex;
+  gap: 20px;
+}
+.buttons-form__black,
+.buttons-form__white {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 9.30594px;
+  line-height: 150%;
+  padding: 7px 21px;
+  border-radius: 6.20396px;
+}
+.buttons-form__black {
+  background: #000000;
+  color: #ffffff;
+}
+.buttons-form__white {
+  background: white;
+  color: black;
+}
+.transfer__form-currency {
+  display: flex;
+  justify-content: center;
+  margin: 46.5px 0;
+  position: relative;
+  width: 100%;
+}
+.currency__wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.currency__amount {
+  font-weight: 800;
+  font-size: 43.4277px;
+  line-height: 53px;
+  color: #000000;
+}
+.currency__exchange-rate {
+  font-weight: 400;
+  font-size: 10.8569px;
+  line-height: 150%;
+  text-align: center;
+  color: #5d5d5b;
+}
+.currency__button {
+  position: absolute;
+  right: 0;
+  top: 14.5px;
+}
+.transfer__inputs {
+  display: flex;
+  flex-direction: column;
+  background: #f5f9fe;
+  border-radius: 12.4079px;
+  width: 100%;
+  padding: 0 24px;
+  position: relative;
+}
+.transfer__inputs > *:not(:last-child) {
+  border-bottom: 1.16126px solid rgba(207, 219, 213, 0.6);
+}
 
-  .continue-transfer {
-    height: 362px;
-    min-width: 288px;
-    margin: 15px auto;
-    background-color: #ffffff;
-    position: absolute;
-    top: 27px;
-    z-index: 2;
-    border-radius: 7.02px;
-    box-shadow: 0px 6.001938819885254px 12.003877639770508px 0px #00000014;
-  }
-  .wrapper-buttons,
-  .wrapper-amount-change {
-    display: flex;
-    justify-items: center;
-    width: 140px;
-    margin: auto;
-    position: relative;
-  }
-  .wrapper-buttons {
-    margin-top: 19.73px;
-  }
-  .wrapper-amount-change {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  .send,
-  .recieve {
-    font-size: 12px;
-    font-weight: 400;
-    padding: 7px;
-    color: black;
-    background-color: #ffffff;
-    border-radius: 6.2px;
-    border: 1px solid white;
-    width: 65px;
-  }
-  .send:hover,
-  .recieve:hover {
-    color: white;
-    background-color: black;
-    border-radius: 6.2px;
-    border: 1px solid black;
-  }
-  .recieve {
-    margin-left: 10px;
-  }
-  .change-currency {
-    background-color: white;
-    background-image: url("../assets/icon.svg");
-    background-size: 14px 11px;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 30.4px;
-    height: 30.4px;
-    border: 1px solid #cfdbd5;
-    border-radius: 4.68px;
-    position: absolute;
-    top: 40px;
-    right: 16px;
-    margin: 0;
-  }
-  .amount {
-    font-size: 33px;
-    font-weight: 800;
-    line-height: 40px;
-    margin: 27px 0 0 0;
-  }
-  .exchange-rate {
-    margin-block-start: 0;
-    font-size: 8.2px;
-    font-weight: 400;
-    line-height: 12.28px;
-    color: #5d5d5b;
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-    margin: 0 16px;
-    width: auto;
-  }
-  .wrapper-form-all {
-    background-color: #f5f9fe;
-    border-radius: 9.36px;
-  }
-  label {
-    width: 70px;
-    font-size: 9.31px;
-    font-weight: 500;
-    line-height: 14px;
-    color: #5d5d5b;
-  }
+.transfer__inputs-wrapper-input {
+  padding: 21px 0;
+  min-height: 41px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 
-  input,
-  select {
-    width: 140px;
-    height: 43px;
-    font-size: 11px;
-    font-weight: 700;
-    line-height: 16.22px;
-    background-color: #f5f9fe;
-    border: none;
-  }
-  input::placeholder {
-    font-size: 11px;
-    font-weight: 400;
-    line-height: 16.22px;
-  }
-  .wrapper-label-input {
-    display: flex;
-    height: 48px;
-    align-items: center;
-    margin: 0 18px 0 16px;
-    border-bottom: 2px solid rgba(207, 219, 213, 0.6);
-  }
-  .wrapper-label-input-last {
-    border-bottom: none;
-  }
-  .button-continue-transfer {
-    width: 100%;
-    height: 41px;
-    border-radius: 6.2px;
-    border: 1px solid #3e8bf3;
-    background-color: #3e8bf3;
-    font-size: 14px;
-    font-weight: 700;
-    color: white;
-    display: block;
-    margin: 11px 0 16px 0;
-  }
+.transfer__inputs-wrapper-input > label {
+  font-weight: 500;
+  font-size: 9.30594px;
+  line-height: 150%;
+  color: #5d5d5b;
+  flex: 0 1 30%;
+}
+.transfer__inputs-wrapper-input > input,
+.transfer__inputs-wrapper-input > select {
+  background: #f5f9fe;
+  flex: 0 1 70%;
+}
+.input-phone {
+  font-weight: 700;
+  font-size: 10.8569px;
+  line-height: 16px;
+  color: black;
+}
+
+select {
+  appearance: none;
+  border: none;
+  padding: 0;
+  width: 100%;
+  font-weight: 700;
+  font-size: 10.8569px;
+  line-height: 16px;
+  position: relative;
+}
+select::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  content: "";
+  width: 0.8em;
+  height: 0.5em;
+  background-color: var(--select-arrow);
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
+.bitcoin {
+  position: relative;
+  padding-left: 20px;
+}
+.bitcoin::before {
+  width: 14px;
+  height: 14px;
+  background-image: url("../assets/images/transfer-images/BitcoinSmall.svg");
+  background-position: center;
+  position: absolute;
+  left: 0;
+}
+.button-continue-transfer {
+  font-weight: 700;
+  font-size: 10.8569px;
+  line-height: 16px;
+  padding: 12px 62.5px;
+  margin: 21px auto;
 }
 </style>
