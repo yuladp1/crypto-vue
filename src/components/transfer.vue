@@ -1,12 +1,13 @@
 <template>
   <section class="page__transfer transfer">
     <div class="transfer__wrapper _container">
-      <div class="transfer__content">
-        <h1 class="transfer__content-title">Exchange crypto and fiat without limits</h1>
-        <button class="transfer__content-button button-blue">Launch App</button>
-        <p class="transfer__content-text">Works on smart contracts</p>
-      </div>
-
+      <transition name="transition-content">
+        <div class="transfer__content">
+          <h1 class="transfer__content-title">Exchange crypto and fiat without limits</h1>
+          <div class="transfer__content-button button-blue">Launch App</div>
+          <p class="transfer__content-text">Works on smart contracts</p>
+        </div>
+      </transition>
       <div class="transfer__wrapper-form">
         <div class="transfer__form">
           <div class="transfer__form__buttons buttons-form">
@@ -66,6 +67,10 @@ export default {
   flex: 0 1 50%;
   justify-items: flex-start;
   padding: 75px 0 47px 0;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: flex-start;
 }
 .transfer__content > *:not(:last-child) {
   margin-bottom: 32px;
@@ -102,6 +107,7 @@ export default {
   background-image: url("../assets/images/transfer-images/blueCircle.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -135,6 +141,7 @@ export default {
   height: 129px;
   background-image: url("../assets/images/transfer-images/ethereumCoin.png");
   background-position: center;
+  background-size: cover;
   position: absolute;
   right: -60px;
   bottom: -60px;
@@ -271,5 +278,58 @@ select::after {
   line-height: 16px;
   padding: 12px 62.5px;
   margin: 21px auto;
+}
+
+@media (max-width: 950px) {
+  .transfer__wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .transfer__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 30px 0;
+  }
+  .transfer__content-title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .transfer__wrapper-form {
+    margin: 32px 0;
+    flex: 0 1 100%;
+  }
+}
+@media (max-width: 600px) {
+  .transfer__wrapper-form {
+    flex: 0 1 100%;
+  }
+
+  .transfer__form::before {
+    width: 80px;
+    height: 75px;
+    left: 0;
+    top: -40px;
+  }
+  .transfer__form::after {
+    width: 65px;
+    height: 70px;
+    right: 100px;
+    bottom: -100px;
+  }
+}
+@media (max-width: 480px) {
+  .transfer__form {
+    width: 380px;
+  }
+}
+@media (max-width: 390px) {
+  .transfer__form {
+    width: 300px;
+  }
 }
 </style>

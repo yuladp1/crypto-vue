@@ -1,269 +1,141 @@
 <template>
-  <div class="wrapper-sections-steps" id="how-work">
-    <section class="wrapper-large-screen">
-      <h1 class="h-medium-width">Make an exchange in 3 steps</h1>
-      <button class="button-start-transfer-medium">Start exchange</button>
-    </section>
-    <div class="wrapper-steps">
-      <section>
+  <section class="page__steps steps">
+    <div class="steps__wrapper _container">
+      <section class="steps__header">
+        <h2 class="_header-sections">Make an exchange in 3 steps</h2>
+        <button class="button-blue">Start exchange</button>
+      </section>
+      <section class="steps__item">
         <figure class="image-step-zero"></figure>
         <div class="step">Step 1</div>
-        <h1>Create or find a deal</h1>
+        <h3>Create or find a deal</h3>
         <p>A wide range of digital asset trading and management services</p>
       </section>
-      <section>
+      <section class="steps__item">
         <figure class="image-step-one"></figure>
         <div class="step">Step 2</div>
-        <h1>Transfer funds securely</h1>
+        <h3>Transfer funds securely</h3>
         <p>A wide range of digital asset trading and management services</p>
       </section>
-      <section class="last-section">
+      <section class="steps__item">
         <figure class="image-step-two"></figure>
         <div class="step">Step 3</div>
-        <h1>Complete the exchange</h1>
+        <h3>Complete the exchange</h3>
         <p>A wide range of digital asset trading and management services</p>
-        <button class="button-start-transfer-mobile">Start exchange</button>
       </section>
+      <button class="button-blue">Start exchange</button>
     </div>
-  </div>
+  </section>
 </template>
 <style scoped>
-@media screen and (min-width: 320px) and (max-width: 720px) {
-  section {
-    margin: 32px 16px 24px 16px;
-  }
-  .last-section {
-    border-bottom: 2px solid rgba(207, 219, 213, 0.6);
-  }
-  h1 {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 32px;
-  }
-  .button-start-transfer-medium {
-    display: none;
-  }
-  p {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    color: #6f767e;
-  }
-  figure {
-    background-size: cover;
-    background-position: center;
-    height: 176px;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    max-width: 320px;
-    margin: auto;
-  }
-  .step {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 20px;
-    padding: 4px 16px 4px 16px;
-    width: fit-content;
-    background-color: #dfd3f7;
-    border-radius: 24px;
-  }
-  .image-step-zero {
-    background-image: url("../assets/image-zer-step.svg");
-  }
-  .image-step-one {
-    background-image: url("../assets/image-step-one.svg");
-  }
-  .image-step-two {
-    background-image: url("../assets/image-second-step.svg");
-  }
-  .button-start-transfer-mobile {
-    width: 100%;
-    height: 48px;
-    border-radius: 8px;
-    border: 1px solid #3e8bf3;
-    background-color: #3e8bf3;
-    font-size: 16px;
-    font-weight: 500;
-    color: white;
-    display: block;
-    margin: 32px 0 32px 0;
-  }
+.steps {
+  padding: 120px 0;
+  border-bottom: 2px solid rgba(207, 219, 213, 0.6);
+}
+.steps__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.steps__header {
+  flex: 0 1 100%;
+  display: flex;
+  margin-bottom: 48px;
+  align-items: center;
+  justify-content: space-between;
+}
+.steps__header > h2 {
+  flex-basis: 450px;
+}
+.steps__items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.steps__item {
+  flex: 0 1 30%;
+}
+.steps__item > *:not(:last-child) {
+  margin-bottom: 24px;
 }
 
-@media screen and (min-width: 721px) and (max-width: 1440px) {
-  .wrapper-sections-steps {
-    width: 100%;
-    background-color: white;
-    display: flex;
+figure {
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  margin: auto;
+}
+.image-step-zero {
+  background-image: url("../assets/image-zer-step.svg");
+}
+.image-step-one {
+  background-image: url("../assets/image-step-one.svg");
+}
+.image-step-two {
+  background-image: url("../assets/image-second-step.svg");
+}
+
+.steps__item > h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+.steps__item > p {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  color: #6f767e;
+}
+
+.step {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 4px 16px;
+  width: fit-content;
+  background-color: #dfd3f7;
+  border-radius: 24px;
+  margin-top: 24px;
+}
+.steps__wrapper > button {
+  display: none;
+}
+@media (max-width: 980px) {
+  .steps__header {
     flex-wrap: wrap;
-    padding: 0 23.5px 64px 23.5px;
-    border-bottom: 2px solid rgba(207, 219, 213, 0.6);
+    flex: 0 1 48%;
   }
-  section {
-    width: 45%;
-    margin: 32px 16px 24px 16px;
+  .steps__header > h2 {
+    margin-bottom: 32px;
   }
-
-  .h-medium-width {
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 56px;
+  .steps__items {
+    flex-wrap: wrap;
   }
-  .button-start-transfer-mobile {
-    display: none;
-  }
-  .button-start-transfer-medium {
-    margin-top: 32px;
-    display: block;
-    width: 169px;
-    height: 56px;
-    border-radius: 8px;
-    border: 1px solid #3e8bf3;
-    background-color: #3e8bf3;
-    font-size: 18px;
-    font-weight: 500;
-    color: white;
-    display: block;
-    margin: 32px 0 32px 0;
-  }
-  h1 {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 32px;
-  }
-  p {
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 32px;
-    color: #6f767e;
-  }
-  figure {
-    background-size: cover;
-    background-position: center;
-    height: 200px;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    margin: auto;
-  }
-  .step {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-    padding: 4px 16px;
-    width: fit-content;
-    background-color: #dfd3f7;
-    border-radius: 24px;
-    margin-top: 24px;
-  }
-  .image-step-zero {
-    background-image: url("../assets/image-zer-step.svg");
-  }
-  .image-step-one {
-    background-image: url("../assets/image-step-one.svg");
-  }
-  .image-step-two {
-    background-image: url("../assets/image-second-step.svg");
-  }
-  .button-start-transfer {
-    width: 100%;
-    height: 48px;
-    border-radius: 8px;
-    border: 1px solid #3e8bf3;
-    background-color: #3e8bf3;
-    font-size: 16px;
-    font-weight: 500;
-    color: white;
-    display: block;
-    margin: 32px 0 32px 0;
+  .steps__item {
+    flex: 0 1 48%;
   }
 }
-
-@media screen and (min-width: 1441px) {
-  .wrapper-sections-steps {
-    width: 100%;
-    background-color: white;
-    padding: 0 23.5px 64px 23.5px;
-    border-bottom: 2px solid rgba(207, 219, 213, 0.6);
+@media (max-width: 630px) {
+  .steps__items {
+    flex-direction: column;
   }
-  .wrapper-large-screen {
-    display: flex;
-    padding: 120px 108px;
+  .steps__item {
+    flex: 0 1 100%;
   }
-  .wrapper-large-screen > h1 {
-    flex-basis: 450px;
-    font-size: 48px;
-    line-height: 56px;
-    margin-right: auto;
+  .steps__header {
+    flex-wrap: wrap;
+    flex: 0 1 auto;
   }
-  .wrapper-large-screen > button {
-    flex-basis: 169px;
-    height: 56px;
-    border-radius: 8px;
-    border: 1px solid #3e8bf3;
-    background-color: #3e8bf3;
-    font-size: 18px;
-    font-weight: 500;
-    color: white;
-    display: block;
-  }
-  .button-start-transfer-mobile {
+  .steps__header > button {
     display: none;
   }
-  .wrapper-steps {
+  .steps__wrapper > button {
     display: flex;
-    flex-wrap: nowrap;
-    gap: 24px;
-    padding: 48px 108px;
-  }
-  h1 {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 32px;
-  }
-  p {
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 32px;
-    color: #6f767e;
-  }
-  figure {
-    background-size: cover;
-    background-position: center;
-    height: 200px;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    margin: auto;
-  }
-  .step {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-    padding: 4px 16px;
-    width: fit-content;
-    background-color: #dfd3f7;
-    border-radius: 24px;
-    margin-top: 24px;
-  }
-  .image-step-zero {
-    background-image: url("../assets/image-zer-step.svg");
-  }
-  .image-step-one {
-    background-image: url("../assets/image-step-one.svg");
-  }
-  .image-step-two {
-    background-image: url("../assets/image-second-step.svg");
-  }
-  .button-start-transfer {
+    margin: 32px 0;
     width: 100%;
-    height: 48px;
-    border-radius: 8px;
-    border: 1px solid #3e8bf3;
-    background-color: #3e8bf3;
-    font-size: 16px;
-    font-weight: 500;
-    color: white;
-    display: block;
-    margin: 32px 0 32px 0;
   }
 }
 </style>

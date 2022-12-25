@@ -1,78 +1,64 @@
 <template>
-  <section class="lead-platform" id="about">
-    <h1>Leading digital asset trading platform</h1>
-    <article>
-      A wide range of digital asset trading and management services to meet variety of
-      trading needs. Comprehensive protection of user assets with our offline storage,
-      multi-factor encryption and 24/7 security monitoring.
-    </article>
+  <section class="page__lead-platform lead-platform">
+    <div class="platform__wrapper _container">
+      <h1 class="_header-sections">Leading digital asset trading platform</h1>
+      <article>
+        A wide range of digital asset trading and management services to meet variety of
+        trading needs. Comprehensive protection of user assets with our offline storage,
+        multi-factor encryption and 24/7 security monitoring.
+      </article>
+    </div>
   </section>
 </template>
 <style scoped>
-@media screen and (min-width: 320px) and (max-width: 720px) {
+.lead-platform {
+  padding: 130px 15px;
+  border-bottom: 1px solid #d9d9d9;
+}
+.platform__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+h1 {
+  flex-basis: 554px;
+}
+article {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 178%;
+  color: #6f767e;
+  flex-basis: 496px;
+}
+@media (max-width: 980px) {
+  .platform__wrapper {
+    flex-direction: column;
+    padding: 0 0;
+  }
   .lead-platform {
-    margin: 32px 16px 0 16px;
-    width: auto;
-    border-bottom: 2px solid rgba(207, 219, 213, 0.6);
+    padding: 80px 0;
   }
   h1 {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 32px;
+    margin-bottom: 32px;
+    flex: 0 1 80%;
   }
   article {
-    margin-top: 16px;
-    padding-bottom: 32px;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 24px;
+    padding-left: 15px;
+    flex: 0 1 80%;
   }
 }
-@media screen and (min-width: 721px) and (max-width: 1440px) {
-  .lead-platform {
-    width: 100%;
-    border-bottom: 2px solid rgba(207, 219, 213, 0.6);
-    background-color: white;
-    padding-left: 24px;
-    padding-top: 80px;
+@media (max-width: 400px) {
+  .platform__wrapper {
+    padding: 30px 15px;
   }
   h1 {
-    width: 70%;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 56px;
+    flex: 0 1 100%;
   }
   article {
-    width: 70%;
-    margin-top: 32px;
-    padding-bottom: 80px;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 32px;
-  }
-}
-
-@media screen and (min-width: 1441px) {
-  .lead-platform {
-    display: flex;
-    gap: 174px;
-    border-bottom: 2px solid rgba(207, 219, 213, 0.6);
-    background-color: white;
-    padding: 120px 108px;
-  }
-  h1 {
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 56px;
-    flex-basis: 550px;
-    flex-grow: 1;
-  }
-  article {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 32px;
-    flex-basis: 550px;
-    flex-grow: 1;
+    padding-left: 15px;
+    flex: 0 1 100%;
+    font-size: 16px;
   }
 }
 </style>

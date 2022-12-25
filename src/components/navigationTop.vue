@@ -26,30 +26,31 @@
       <figure class="header__menu-icon" v-if="!islargeScreen" v-on:click="toggleShowMenu">
         <img src="../assets/images/header-images/burger.svg" alt="" />
       </figure>
-
-      <nav v-if="showMenu" :class="{ 'header__menu-drop': showMenu }">
-        <ul>
-          <li v-for="item in list1" :key="item.id">
-            <a class="header__menu-drop-item" :href="item.scrollTo">{{ item.title }}</a>
-          </li>
-        </ul>
-        <hr />
-        <h2>Choose language</h2>
-        <div class="header__menu-drop-countries">
-          <div class="header__menu-drop-country">
-            <figure class="header__menu-drop-country-flag">
-              <img src="../assets/ukraine.svg" alt="" />
-            </figure>
-            <h2 class="header__menu-drop-country-name">Ukraine</h2>
+      <transition name="transition-content">
+        <nav v-if="showMenu" :class="{ 'header__menu-drop': showMenu }">
+          <ul>
+            <li v-for="item in list1" :key="item.id">
+              <a class="header__menu-drop-item" :href="item.scrollTo">{{ item.title }}</a>
+            </li>
+          </ul>
+          <hr />
+          <h2>Choose language</h2>
+          <div class="header__menu-drop-countries">
+            <div class="header__menu-drop-country">
+              <figure class="header__menu-drop-country-flag">
+                <img src="../assets/ukraine.svg" alt="" />
+              </figure>
+              <h2 class="header__menu-drop-country-name">Ukraine</h2>
+            </div>
+            <div class="header__menu-drop-country">
+              <figure class="header__menu-drop-country-flag">
+                <img src="../assets/ukraine.svg" alt="" />
+              </figure>
+              <span class="header__menu-drop-country-name">Ukraine</span>
+            </div>
           </div>
-          <div class="header__menu-drop-country">
-            <figure class="header__menu-drop-country-flag">
-              <img src="../assets/ukraine.svg" alt="" />
-            </figure>
-            <span class="header__menu-drop-country-name">Ukraine</span>
-          </div>
-        </div>
-      </nav>
+        </nav>
+      </transition>
     </div>
   </div>
 </template>
@@ -100,7 +101,7 @@ export default {
   position: relative;
 }
 .header__wrapper {
-  padding: 20px 24px;
+  padding: 0 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -127,6 +128,10 @@ export default {
   display: inline-block;
   padding: 30px 0;
   border-bottom: 2px solid white;
+  color: #6f767e;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
 }
 .header__navigation-menu > div > li > a:hover {
   border-bottom: 2px solid #3e8bf3;
@@ -152,7 +157,7 @@ export default {
 
 .header__menu-icon {
   margin-left: 30px;
-  z-index: 2;
+  z-index: 11;
 }
 .header__menu-drop {
   position: absolute;
@@ -164,13 +169,14 @@ export default {
   background: white;
   display: flex;
   flex-direction: column;
+  z-index: 10;
 }
 .header__menu-drop > ul {
   display: flex;
   gap: 24px;
   flex-direction: column;
 }
-.header__menu-drop > a {
+.header__menu-drop > ul > li > a {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -231,6 +237,9 @@ hr {
 @media (max-width: 729px) {
   .header__country {
     margin-left: auto;
+  }
+  .page__header {
+    padding: 30px;
   }
 }
 @media (max-width: 500px) {
