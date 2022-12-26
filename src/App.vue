@@ -7,14 +7,16 @@
     <changeSteps />
     <countriesApp />
 
-    <div class="FaqAnswers__wrapper faqanswers _container">
-      <div class="FaqAnswers__text">
-        <h1 class="_header-sections">FAQ</h1>
-        <p>Найдите ответы на интересующие вопросы</p>
-      </div>
-      <div class="faqanswers__items">
-        <div v-for="item in list" :key="item.id">
-          <FaqAnswers v-bind:article="item" />
+    <div class="page__FaqAnswers faqanswers">
+      <div class="FaqAnswers__wrapper _container">
+        <div class="FaqAnswers__text">
+          <h1 class="_header-sections">FAQ</h1>
+          <p>Найдите ответы на интересующие вопросы</p>
+        </div>
+        <div class="faqanswers__items">
+          <div v-for="item in list" :key="item.id">
+            <FaqAnswers v-bind:article="item" />
+          </div>
         </div>
       </div>
     </div>
@@ -26,7 +28,7 @@
 
 <script>
 import navigationTop from "./components/navigationTop.vue";
-import transferContinue from "./components/transfer.vue";
+import transferContinue from "./components/transferPage.vue";
 import leadingPlatform from "./components/leadingPlatform.vue";
 import changeSteps from "./components/changeSteps.vue";
 import countriesApp from "./components/countriesApp.vue";
@@ -95,7 +97,7 @@ body {
   line-height: 117%;
   color: #000000;
 }
-@media (max-width: 400px) {
+@media (max-width: 440px) {
   ._header-sections {
     margin-bottom: 20px;
     font-size: 32px;
@@ -121,6 +123,42 @@ body {
 .button-blue:active {
   background: #295da2;
 }
+/* section icons */
+.icons__wrapper-content {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+.icons__wrapper-content > h2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 133%;
+  color: #6f767e;
+}
+.icons__wrapper-icons {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+}
+.icons__wrapper-icons > div {
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 8px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 50%;
+}
+.fb-icon {
+  background: url("./assets/images/social-icons-images/fb.svg");
+}
+.twitter-icon {
+  background: url("./assets/images/social-icons-images/twitter.svg");
+}
+.instagram-icon {
+  background: url("./assets/images/social-icons-images/instagram.svg");
+}
 /* transitions */
 .transition-content-enter-active,
 .transition-content-leave-active {
@@ -132,4 +170,60 @@ body {
   transform: translateX(200px);
 }
 /*end transitions */
+</style>
+<style scoped>
+.faqanswers {
+  padding: 120px 0 200px 0;
+}
+.FaqAnswers__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.FaqAnswers__text {
+  flex: 0 1 30%;
+  flex-basis: 222px;
+}
+.FaqAnswers__text > p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #6f767e;
+}
+.faqanswers__items {
+  flex: 0 1 70%;
+}
+@media (max-width: 980px) {
+  .faqanswers {
+    padding: 80px 0 80px 0;
+  }
+  .FaqAnswers__wrapper {
+    flex-direction: column;
+  }
+  .FaqAnswers__text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .FaqAnswers__text > p {
+    padding-left: 30px;
+    max-width: 240px;
+  }
+}
+@media (max-width: 500px) {
+  .faqanswers {
+    padding: 0 0 80px 0;
+  }
+  .FaqAnswers__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-basis: auto;
+  }
+  .FaqAnswers__text > p {
+    padding-left: 0;
+  }
+}
 </style>

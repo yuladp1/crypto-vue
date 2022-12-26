@@ -26,40 +26,37 @@
       <figure class="header__menu-icon" v-if="!islargeScreen" v-on:click="toggleShowMenu">
         <img src="../assets/images/header-images/burger.svg" alt="" />
       </figure>
-      <transition name="transition-content">
-        <nav v-if="showMenu" :class="{ 'header__menu-drop': showMenu }">
-          <ul>
-            <li v-for="item in list1" :key="item.id">
-              <a class="header__menu-drop-item" :href="item.scrollTo">{{ item.title }}</a>
-            </li>
-          </ul>
-          <hr />
-          <h2>Choose language</h2>
-          <div class="header__menu-drop-countries">
-            <div class="header__menu-drop-country">
-              <figure class="header__menu-drop-country-flag">
-                <img src="../assets/ukraine.svg" alt="" />
-              </figure>
-              <h2 class="header__menu-drop-country-name">Ukraine</h2>
-            </div>
-            <div class="header__menu-drop-country">
-              <figure class="header__menu-drop-country-flag">
-                <img src="../assets/ukraine.svg" alt="" />
-              </figure>
-              <span class="header__menu-drop-country-name">Ukraine</span>
-            </div>
-          </div>
-        </nav>
-      </transition>
     </div>
+    <transition name="transition-content">
+      <nav v-if="showMenu" :class="{ 'header__menu-drop': showMenu }">
+        <ul>
+          <li v-for="item in list1" :key="item.id">
+            <a class="header__menu-drop-item" :href="item.scrollTo">{{ item.title }}</a>
+          </li>
+        </ul>
+        <hr />
+        <h2>Choose language</h2>
+        <div class="header__menu-drop-countries">
+          <div class="header__menu-drop-country">
+            <figure class="header__menu-drop-country-flag">
+              <img src="../assets/ukraine.svg" alt="" />
+            </figure>
+            <h2 class="header__menu-drop-country-name">Ukraine</h2>
+          </div>
+          <div class="header__menu-drop-country">
+            <figure class="header__menu-drop-country-flag">
+              <img src="../assets/ukraine.svg" alt="" />
+            </figure>
+            <span class="header__menu-drop-country-name">Ukraine</span>
+          </div>
+        </div>
+      </nav>
+    </transition>
   </div>
 </template>
 
 <script>
 export default {
-  name: "navigationTop",
-  components: {},
-
   data() {
     return {
       showMenu: false,
@@ -182,6 +179,9 @@ export default {
   line-height: 24px;
   color: #6f767e;
 }
+.header__menu-drop > ul > li > a:hover {
+  color: #3e8bf3;
+}
 .header__menu-drop > *:not(:last-child) {
   margin-bottom: 24px;
 }
@@ -239,7 +239,7 @@ hr {
     margin-left: auto;
   }
   .page__header {
-    padding: 30px;
+    padding: 30px 15px;
   }
 }
 @media (max-width: 500px) {
@@ -254,6 +254,9 @@ hr {
   }
 }
 @media (max-width: 410px) {
+  .page__header {
+    padding: 20px 10px;
+  }
   .header__wrapper {
     gap: 10px;
   }

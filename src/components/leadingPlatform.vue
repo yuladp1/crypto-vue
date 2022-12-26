@@ -34,7 +34,6 @@ article {
 @media (max-width: 980px) {
   .platform__wrapper {
     flex-direction: column;
-    padding: 0 0;
   }
   .lead-platform {
     padding: 80px 0;
@@ -44,7 +43,6 @@ article {
     flex: 0 1 80%;
   }
   article {
-    padding-left: 15px;
     flex: 0 1 80%;
   }
 }
@@ -56,7 +54,6 @@ article {
     flex: 0 1 100%;
   }
   article {
-    padding-left: 15px;
     flex: 0 1 100%;
     font-size: 16px;
   }

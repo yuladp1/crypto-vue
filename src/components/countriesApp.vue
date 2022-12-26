@@ -1,280 +1,151 @@
 <template>
-  <div class="wrapper-all-content" id="were-work">
-    <section>
-      <h1>Countries with which the service is already working</h1>
-      <div class="wrapper-buttons-medium">
-        <button class="button-launch-app">Launch App</button>
-        <button class="button-country">Connect my country</button>
+  <div class="page__countries countries">
+    <div class="coutries__wrapper _container" id="were-work">
+      <figure class="map"><img src="../assets/map.svg" alt="" /></figure>
+      <div class="countries__list">
+        <div class="countries__list-country">
+          <img src="../assets/images/countries-images/ukraine.svg" alt="" />
+          <p class="country-name">Ukraine</p>
+        </div>
+        <div class="countries__list-country">
+          <img src="../assets/images/countries-images/kazakhstan.svg" alt="" />
+          <p class="country-name">Kazakhstan</p>
+        </div>
+        <div class="countries__list-country">
+          <img src="../assets/images/countries-images/turkey.svg" alt="" />
+          <p class="country-name">Turkey</p>
+        </div>
+        <div class="countries__list-country">
+          <img src="../assets/images/countries-images/ukraine.svg" alt="" />
+          <p class="country-name">Ukraine</p>
+        </div>
       </div>
-    </section>
 
-    <div class="wrapper-large-screen-map-countries">
-      <figure class="image-map"><img src="../assets/map.svg" alt="" /></figure>
-      <div class="countries-list">
-        <div class="wrapper-country">
-          <figure class="img-flag"></figure>
-          <p class="country-name">Ukraine</p>
+      <section class="countries__content">
+        <h2 class="_header-sections">
+          Countries with which the service is already working
+        </h2>
+        <div class="countries__content-buttons">
+          <button class="button-blue">Launch App</button>
+          <button class="button-country button-blue">Connect my country</button>
         </div>
-        <div class="wrapper-country">
-          <figure class="img-flag"></figure>
-          <p class="country-name">Ukraine</p>
-        </div>
-        <div class="wrapper-country">
-          <figure class="img-flag"></figure>
-          <p class="country-name">Ukraine</p>
-        </div>
-        <div class="wrapper-country">
-          <figure class="img-flag"></figure>
-          <p class="country-name">Ukraine</p>
-        </div>
-        <div class="wrapper-country">
-          <figure class="img-flag"></figure>
-          <p class="country-name">Ukraine</p>
-        </div>
-      </div>
+      </section>
     </div>
   </div>
 </template>
 
-<script>
-export default {};
-</script>
-
 <style scoped>
-@media screen and (min-width: 320px) and (max-width: 720px) {
-  section {
-    margin: 32px 16px 54px 16px;
-    border-bottom: 2px solid rgba(207, 219, 213, 0.6);
+.countries {
+  padding: 120px 0;
+}
+.coutries__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  height: 568px;
+}
+.map {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1008px;
+  height: 568px;
+}
+.map > img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  object-fit: cover;
+}
+.countries__content {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+.countries__content > h2 {
+  display: inline-block;
+  max-width: 452px;
+}
+.countries__content-buttons {
+  display: flex;
+  gap: 16px;
+  padding-top: 32px;
+}
+.button-country {
+  border: 1px solid #f5f9fe;
+  background: #f5f9fe;
+  color: #6f767e;
+}
+.button-country:hover {
+  border: 1px solid #e3eefd;
+  background: #e3eefd;
+  color: black;
+}
+.button-country:active {
+  border: 1px solid #bfd8fb;
+  background: #bfd8fb;
+  color: black;
+}
+.countries__list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  background: #f5f9fe;
+  max-width: 157px;
+  border-radius: 16px;
+  z-index: 1;
+}
+.countries__list-country {
+  display: flex;
+  gap: 8px;
+  justify-items: center;
+  align-items: center;
+  border-radius: 8px;
+  padding: 10px 16px;
+  color: #6f767e;
+}
+.countries__list-country:hover {
+  background-color: white;
+  cursor: pointer;
+  color: black;
+}
+.country-name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: inherit;
+}
+@media (max-width: 800px) {
+  .countries {
+    padding: 80px 0;
   }
-  h1 {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 32px;
+  .coutries__wrapper {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    height: 750px;
   }
-  button {
-    width: 100%;
-    height: 48px;
-    border-radius: 8px;
-    border: 1px solid #3e8bf3;
-    background-color: #3e8bf3;
-    font-size: 16px;
-    font-weight: 500;
-    color: white;
-    display: block;
-    margin: 32px 0 32px 0;
+  .map {
+    top: 280px;
+    right: 0;
+    height: 382px;
   }
-  .image-map {
-    width: 100%;
-    height: 166px;
-    margin: 32px 0 32px 0;
+  .countries__content > h2 {
+    max-width: 503px;
   }
-  img {
-    width: 100%;
-    height: 100%;
-  }
-  .countries-list {
-    width: 100%;
-    height: 52px;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    margin-bottom: 36px;
-    background-color: #f5f9fe;
-  }
-  .wrapper-country {
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    height: 36px;
-    border-radius: 8px;
-    margin: 8px 16px 8px 16px;
-  }
-  .wrapper-country:hover {
-    background-color: white;
-    cursor: pointer;
-  }
-  .img-flag {
-    background-image: url("../assets/ukraine.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    padding-right: 8px;
-    padding-left: 8px;
-    width: 20px;
-    height: 20px;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-  }
-  .country-name {
-    font-size: 14px;
-    font-weight: 500;
-    padding-right: 16px;
+  .countries__list {
+    flex-direction: row;
   }
 }
-@media screen and (min-width: 721px) and (max-width: 1440px) {
-  section {
-    background-color: white;
-    padding: 32px 16px 54px 16px;
-    border-bottom: 2px solid rgba(207, 219, 213, 0.6);
-  }
-  h1 {
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 56px;
-  }
-  .wrapper-buttons-medium {
-    display: flex;
-  }
-  button {
-    width: fit-content;
-    height: 56px;
-    border-radius: 8px;
-    border: 1px solid #3e8bf3;
-    background-color: #3e8bf3;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 32px;
-    color: white;
-    display: block;
-    margin: 32px 18px 67px 0;
-  }
-  .image-map {
-    width: 100%;
-    height: 383px;
-    padding: 32px 0 32px 0;
-  }
-  img {
-    width: 100%;
-    height: 100%;
-  }
-  .countries-list {
-    width: 100%;
-    height: 52px;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    margin-bottom: 36px;
-    background-color: #f5f9fe;
-  }
-  .wrapper-country {
-    background-color: white;
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    height: 36px;
-    border-radius: 8px;
-    margin: 8px 16px 8px 16px;
-  }
-  .wrapper-country:hover {
-    background-color: white;
-    cursor: pointer;
-  }
-  .img-flag {
-    background-image: url("../assets/ukraine.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    padding-right: 8px;
-    padding-left: 8px;
-    width: 20px;
-    height: 20px;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-  }
-  .country-name {
-    font-size: 14px;
-    font-weight: 500;
-    padding-right: 16px;
-  }
-}
-
-@media screen and (min-width: 1441px) {
-  .wrapper-all-content {
-    background-color: white;
-    width: 100%;
-    height: 568px;
-    padding: 120px 108px;
-    position: relative;
-    border-bottom: 2px solid rgba(207, 219, 213, 0.6);
-  }
-  section {
-    position: absolute;
-    bottom: 120px;
-    left: 108px;
-    width: 452px;
-  }
-  .wrapper-large-screen-map-countries {
-    display: flex;
-  }
-  h1 {
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 56px;
-  }
-  .wrapper-buttons-medium {
-    display: flex;
-    gap: 16px;
-    padding-top: 32px;
-  }
-  button {
-    width: fit-content;
-    height: 56px;
-    border-radius: 8px;
-    border: 1px solid #3e8bf3;
-    background-color: #3e8bf3;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 32px;
-    color: white;
-    display: block;
-  }
-  .image-map {
-    flex-basis: 1008px;
-    height: 568px;
-    order: 2;
-    margin-left: auto;
-  }
-  img {
-    width: 100%;
-    height: 100%;
-  }
-  .countries-list {
-    order: 1;
-    flex-basis: 157px;
-    height: 258px;
-    overflow-y: scroll;
-    display: flex;
+@media (max-width: 400px) {
+  .countries__content-buttons {
     flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    background-color: #f5f9fe;
-  }
-  .wrapper-country {
-    background-color: white;
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    border-radius: 8px;
-  }
-  .wrapper-country:hover {
-    background-color: white;
-    cursor: pointer;
-  }
-  .img-flag {
-    background-image: url("../assets/ukraine.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    padding-right: 8px;
-    padding-left: 8px;
-    width: 20px;
-    height: 20px;
-  }
-  .country-name {
-    font-size: 14px;
-    font-weight: 500;
-    padding-right: 16px;
+    gap: 8px;
+    padding-top: 20px;
   }
 }
 </style>

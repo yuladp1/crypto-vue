@@ -1,152 +1,71 @@
 <template>
-  <section>
-    <div class="wrapper-large-text-and-button">
-      <h1>Exchange funds in minutes</h1>
-      <p>A wide range of digital asset trading and management services</p>
-      <button>Launch App</button>
+  <section class="page__change-fast change-fast">
+    <div class="change-fast__wrapper _container">
+      <div class="change-fast__content">
+        <h1 class="_header-sections">Exchange funds in minutes</h1>
+        <p>A wide range of digital asset trading and management services</p>
+        <button class="button-blue">Launch App</button>
+      </div>
+      <img src="../assets/image-mobile.svg" alt="" />
     </div>
-    <figure></figure>
   </section>
 </template>
 
-<script>
-export default {};
-</script>
-
 <style scoped>
-@media screen and (min-width: 320px) and (max-width: 720px) {
-  section {
-    background-color: #f5f9fe;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  h1 {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 32px;
-    padding: 32px 16px 16px 16px;
-    text-align: center;
-  }
-  p {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    color: #6f767e;
-    text-align: center;
-    padding: 0 16px;
-  }
-  button {
-    width: 137px;
-    height: 48px;
-    border-radius: 8px;
-    border: 1px solid #3e8bf3;
-    background-color: #3e8bf3;
-    font-size: 16px;
-    font-weight: 500;
-    color: white;
-    display: block;
-    margin: 16px 0;
-  }
-  figure {
-    width: 288px;
-    height: 333px;
-    background-image: url("../assets/image-mobile.svg");
-  }
+.change-fast {
+  padding: 215px 0 76px 0;
+  background: #f5f9fe;
+  height: 520px;
 }
-
-@media screen and (min-width: 721px) and (max-width: 1440px) {
-  section {
-    background-color: #f5f9fe;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  h1 {
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 56px;
-    padding: 80px 90px 32px 80px;
-    text-align: center;
-  }
-  p {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 32px;
-    color: #6f767e;
-    text-align: center;
-    padding: 0 115px 32px 115px;
-  }
-  button {
-    width: 148px;
-    height: 56px;
-    border-radius: 8px;
-    border: 1px solid #3e8bf3;
-    background-color: #3e8bf3;
-    font-size: 18px;
-    font-weight: 500;
-    color: white;
-    display: block;
-    margin: 16px 0;
-  }
-  figure {
-    width: 456px;
-    height: 528px;
-    background-image: url("../assets/image-mobile.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+.change-fast__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 49px;
+  height: 100%;
+  position: relative;
 }
-
-@media screen and (min-width: 1441px) {
-  section {
-    background-color: #f5f9fe;
-    width: 100%;
-    height: 520px;
-    display: flex;
-    align-items: center;
-    gap: 192px;
+.change-fast__content {
+  align-items: flex-start;
+  flex: 0 1 40%;
+}
+.change-fast__content > *:not(:last-child) {
+  margin-bottom: 32px;
+}
+p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+  color: #6f767e;
+}
+img {
+  width: 500px;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  right: 50px;
+}
+@media (max-width: 980px) {
+  .change-fast {
+    padding: 80px 0 0 0;
+    height: auto;
   }
-  .wrapper-large-text-and-button {
+
+  .change-fast__wrapper {
     display: flex;
     flex-direction: column;
-    flex-basis: 542px;
-    flex-grow: 1;
-    padding-left: 108px;
+    align-items: center;
+    gap: 50px;
   }
-  h1 {
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 56px;
+  .change-fast__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  p {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 32px;
-    color: #6f767e;
-  }
-  button {
-    width: 148px;
-    height: 56px;
-    border-radius: 8px;
-    border: 1px solid #3e8bf3;
-    background-color: #3e8bf3;
-    font-size: 18px;
-    font-weight: 500;
-    color: white;
-    display: block;
-    margin: 16px 0;
-  }
-  figure {
-    width: 505px;
-    height: 600px;
-    align-self: flex-end;
-    overflow-y: visible;
-    background-image: url("../assets/image-mobile.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
+  img {
+    width: 70%;
+    height: auto;
+    position: relative;
+    right: auto;
   }
 }
 </style>

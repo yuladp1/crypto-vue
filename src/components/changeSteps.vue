@@ -119,6 +119,9 @@ figure {
   }
 }
 @media (max-width: 630px) {
+  .steps {
+    padding: 80px 0;
+  }
   .steps__items {
     flex-direction: column;
   }
