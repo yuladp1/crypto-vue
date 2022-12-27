@@ -43,19 +43,17 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  height: 568px;
+  /* height: 568px; */
 }
 .map {
   position: absolute;
   top: 0;
   right: 0;
-  width: 1008px;
-  height: 568px;
+  width: 100%;
 }
 .map > img {
   width: 100%;
   height: 100%;
-  position: absolute;
   top: 0;
   right: 0;
   object-fit: cover;
@@ -125,19 +123,21 @@
     padding: 80px 0;
   }
   .coutries__wrapper {
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: space-between;
-    height: 750px;
   }
   .map {
-    top: 280px;
-    right: 0;
-    height: 382px;
+    position: relative;
+    order: 2;
+  }
+  .countries__content {
+    order: 1;
   }
   .countries__content > h2 {
     max-width: 503px;
   }
   .countries__list {
+    order: 3;
     flex-direction: row;
   }
 }

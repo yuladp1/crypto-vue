@@ -16,7 +16,7 @@
 
       <div class="header__country">
         <figure class="header__country-flag">
-          <img src="../assets/ukraine.svg" alt="" />
+          <img src="../assets/images/countries-images/ukraine.svg" alt="" />
         </figure>
         <span class="header__country-name">Ukraine</span>
         <figure><img src="../assets/images/header-images/Vector.svg" alt="" /></figure>
@@ -39,15 +39,15 @@
         <div class="header__menu-drop-countries">
           <div class="header__menu-drop-country">
             <figure class="header__menu-drop-country-flag">
-              <img src="../assets/ukraine.svg" alt="" />
+              <img src="../assets/images/countries-images/ukraine.svg" alt="" />
             </figure>
             <h2 class="header__menu-drop-country-name">Ukraine</h2>
           </div>
           <div class="header__menu-drop-country">
             <figure class="header__menu-drop-country-flag">
-              <img src="../assets/ukraine.svg" alt="" />
+              <img src="../assets/images/countries-images/turkey.svg" alt="" />
             </figure>
-            <span class="header__menu-drop-country-name">Ukraine</span>
+            <span class="header__menu-drop-country-name">Turkey</span>
           </div>
         </div>
       </nav>

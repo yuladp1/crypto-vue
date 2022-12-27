@@ -40,10 +40,6 @@ export default {
 </script>
 
 <style scoped>
-.button-active {
-  background-image: url("../assets/Minus.svg");
-}
-
 ul {
   display: flex;
   flex-direction: column;

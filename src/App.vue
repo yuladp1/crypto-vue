@@ -11,7 +11,7 @@
       <div class="FaqAnswers__wrapper _container">
         <div class="FaqAnswers__text">
           <h1 class="_header-sections">FAQ</h1>
-          <p>Найдите ответы на интересующие вопросы</p>
+          <p>Find answers to your questions</p>
         </div>
         <div class="faqanswers__items">
           <div v-for="item in list" :key="item.id">
@@ -196,7 +196,7 @@ body {
 }
 @media (max-width: 980px) {
   .faqanswers {
-    padding: 80px 0 80px 0;
+    padding: 0 0 80px 0;
   }
   .FaqAnswers__wrapper {
     flex-direction: column;
@@ -212,9 +212,6 @@ body {
   }
 }
 @media (max-width: 500px) {
-  .faqanswers {
-    padding: 0 0 80px 0;
-  }
   .FaqAnswers__text {
     display: flex;
     flex-direction: column;
