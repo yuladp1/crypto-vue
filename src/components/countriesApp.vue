@@ -27,13 +27,56 @@
         </h2>
         <div class="countries__content-buttons">
           <button class="button-blue">Launch App</button>
-          <button class="button-country button-blue">Connect my country</button>
+          <button class="button-country button-blue" @click="showpopup = true">
+            Connect my country
+          </button>
         </div>
       </section>
+    </div>
+
+    <!-- pop-up --->
+    <div v-if="showpopup" class="country__pop-up__wrapper">
+      <div class="country__pop-up">
+        <img
+          src="../assets/images/countries-images/X.png"
+          alt=""
+          @click="showpopup = false"
+        />
+        <h2>Link my country</h2>
+        <form class="">
+          <div class="popup__wrapper-item">
+            <label>Select country</label>
+            <select>
+              <option>Ukraine</option>
+              <option>Turkey</option>
+              <option>Kazakhstan</option>
+            </select>
+          </div>
+          <div class="popup__wrapper-item">
+            <label>Your name:</label>
+            <input type="text" placeholder="Type your name" />
+          </div>
+          <div class="popup__wrapper-item">
+            <label>Email</label>
+            <input type="email" placeholder="Type your email here" />
+          </div>
+        </form>
+        <div class="button-blue">Send form</div>
+      </div>
     </div>
   </div>
 </template>
 
+<script>
+export default {
+  name: "countriesApp",
+  data() {
+    return {
+      showpopup: false,
+    };
+  },
+};
+</script>
 <style scoped>
 .countries {
   padding: 120px 0;
@@ -43,7 +86,6 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  /* height: 568px; */
 }
 .map {
   position: absolute;
@@ -118,6 +160,69 @@
   line-height: 150%;
   color: inherit;
 }
+/*---------------------------------popUp styles --------*/
+.country__pop-up__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(30, 30, 30, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.country__pop-up {
+  background: white;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  z-index: 3;
+  position: fixed;
+  top: 50px;
+  left: 29%;
+  width: 42%;
+}
+.country__pop-up > *:not(:last-child) {
+  margin-bottom: 32px;
+}
+.country__pop-up > form {
+  display: flex;
+  flex-direction: column;
+}
+
+.country__pop-up > h2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 125%;
+  color: #000000;
+  margin-top: 32px;
+}
+.country__pop-up > img {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 30px;
+}
+.popup__wrapper-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.popup__wrapper-item > label {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #6f767e;
+}
+.popup__wrapper-item > input,
+.popup__wrapper-item > select {
+  padding: 15px 0;
+  border: 1px solid grey;
+}
+
 @media (max-width: 800px) {
   .countries {
     padding: 80px 0;

@@ -27,6 +27,11 @@
     </div>
   </section>
 </template>
+<script>
+export default {
+  name: "changeSteps",
+};
+</script>
 <style scoped>
 .steps {
   padding: 120px 0;

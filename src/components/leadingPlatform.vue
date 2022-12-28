@@ -10,6 +10,11 @@
     </div>
   </section>
 </template>
+<script>
+export default {
+  name: "leadingPlatform",
+};
+</script>
 <style scoped>
 .lead-platform {
   padding: 130px 15px;

@@ -3,7 +3,7 @@
     <div>
       <li>
         {{ article.articleTitle }}
-        <div v-on:click="toggleMethod">
+        <div @click="toggleMethod">
           {{ symbol }}
         </div>
       </li>

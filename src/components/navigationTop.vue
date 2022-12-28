@@ -23,7 +23,7 @@
       </div>
 
       <button class="header__button button-blue">Launch App</button>
-      <figure class="header__menu-icon" v-if="!islargeScreen" v-on:click="toggleShowMenu">
+      <figure class="header__menu-icon" v-if="!islargeScreen" @click="toggleShowMenu">
         <img src="../assets/images/header-images/burger.svg" alt="" />
       </figure>
     </div>
@@ -57,6 +57,7 @@
 
 <script>
 export default {
+  name: "navigationTop",
   data() {
     return {
       showMenu: false,

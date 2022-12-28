@@ -10,7 +10,11 @@
     </div>
   </section>
 </template>
-
+<script>
+export default {
+  name: "changeMoneyFast",
+};
+</script>
 <style scoped>
 .change-fast {
   padding: 215px 0 76px 0;

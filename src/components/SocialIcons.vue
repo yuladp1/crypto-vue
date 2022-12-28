@@ -14,7 +14,11 @@
     </div>
   </div>
 </template>
-
+<script>
+export default {
+  name: "socialIcons",
+};
+</script>
 <style>
 .icons {
   padding: 47px 24px 24px 24px;

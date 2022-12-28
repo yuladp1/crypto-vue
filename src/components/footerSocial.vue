@@ -18,7 +18,11 @@
     </div>
   </footer>
 </template>
-
+<script>
+export default {
+  name: "footerSocial",
+};
+</script>
 <style scoped>
 .footer {
   padding: 76px 0;

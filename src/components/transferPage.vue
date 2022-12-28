@@ -48,7 +48,11 @@
     </div>
   </section>
 </template>
-
+<script>
+export default {
+  name: "transferContinue",
+};
+</script>
 <style scoped>
 .transfer {
   background: #f5f9fe;
